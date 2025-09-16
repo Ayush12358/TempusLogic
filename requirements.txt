@@ -1,1 +1,4 @@
+pandas
 ollama
+huggingface_hub
+google-genai
