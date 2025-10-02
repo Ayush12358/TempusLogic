@@ -1,0 +1,64 @@
+
+=== Dyads Original ===
+Accuracy: 0.9667
+Macro Precision: 0.9833
+Macro Recall:    0.9667
+
+Per-class:
+  yes           P=0.9500 R=1.0000 Support=19
+  no            P=1.0000 R=0.9000 Support=10
+  inconclusive  P=1.0000 R=1.0000 Support=1
+
+Confusion Matrix (rows=true, cols=pred):
+            YES    NO   INC
+       YES    19     0     0
+        NO     1     9     0
+       INC     0     0     1
+
+=== Dyads modified ===
+Accuracy: 0.2333
+Macro Precision: 0.0805
+Macro Recall:    0.3333
+
+Per-class:
+  yes           P=0.0000 R=0.0000 Support=18
+  no            P=0.0000 R=0.0000 Support=5
+  inconclusive  P=0.2414 R=1.0000 Support=7
+
+Confusion Matrix (rows=true, cols=pred):
+            YES    NO   INC
+       YES     0     1    17
+        NO     0     0     5
+       INC     0     0     7
+
+=== Triads Original ===
+Accuracy: 0.8333
+Macro Precision: 0.5865
+Macro Recall:    0.6140
+
+Per-class:
+  yes           P=0.9412 R=0.8421 Support=19
+  no            P=0.8182 R=1.0000 Support=9
+  inconclusive  P=0.0000 R=0.0000 Support=2
+
+Confusion Matrix (rows=true, cols=pred):
+            YES    NO   INC
+       YES    16     1     2
+        NO     0     9     0
+       INC     1     1     0
+
+=== Triads modified ===
+Accuracy: 0.6333
+Macro Precision: 0.5357
+Macro Recall:    0.3939
+
+Per-class:
+  yes           P=0.0000 R=0.0000 Support=2
+  no            P=1.0000 R=0.1818 Support=11
+  inconclusive  P=0.6071 R=1.0000 Support=17
+
+Confusion Matrix (rows=true, cols=pred):
+            YES    NO   INC
+       YES     0     0     2
+        NO     0     2     9
+       INC     0     0    17

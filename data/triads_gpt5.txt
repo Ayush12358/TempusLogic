@@ -1,0 +1,447 @@
+**Triad 1**  
+1. All emeralds are gemstones.  
+2. No gemstone is a metal.  
+3. This object is an emerald.  
+**Question:** Is the object a metal?  
+**Answer:** No  
+
+**Modified version**  
+1. All emeralds are precious stones.  
+2. Some precious stones are used in jewelry.  
+3. This object is an emerald.  
+**New conclusion:** Inconclusive (the object could be used in jewelry or not).  
+
+---  
+
+**Triad 2**  
+1. Every professor teaches at least one course.  
+2. Dr. Lee teaches only mathematics.  
+3. Dr. Lee is a professor.  
+**Question:** Does Dr. Lee teach a science course?  
+**Answer:** Yes  
+
+**Modified version**  
+1. Every professor teaches at least one course.  
+2. Dr. Lee teaches only humanities.  
+3. Dr. Lee is a professor.  
+**New conclusion:** No  
+
+---  
+
+**Triad 3**  
+1. If a car is electric, it produces zero tailpipe emissions.  
+2. The vehicle in the driveway is electric.  
+3. The vehicle in the driveway is a car.  
+**Question:** Does the vehicle produce zero tailpipe emissions?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a car is electric, it produces zero tailpipe emissions.  
+2. The vehicle in the driveway is a hybrid.  
+3. The vehicle in the driveway is a car.  
+**New conclusion:** Inconclusive  
+
+---  
+
+**Triad 4**  
+1. No birds are mammals.  
+2. All penguins are birds.  
+3. Larry is a penguin.  
+**Question:** Is Larry a mammal?  
+**Answer:** No  
+
+**Modified version**  
+1. No birds are mammals.  
+2. Some penguins can fly.  
+3. Larry is a penguin.  
+**New conclusion:** No (still, Larry is not a mammal).  
+
+---  
+
+**Triad 5**  
+1. Every square is a rectangle.  
+2. This figure is a square.  
+3. All rectangles have four right angles.  
+**Question:** Does this figure have four right angles?  
+**Answer:** Yes  
+
+**Modified version**  
+1. Every square is a rectangle.  
+2. This figure is a rhombus.  
+3. All rectangles have four right angles.  
+**New conclusion:** Inconclusive (a rhombus need not have right angles).  
+
+---  
+
+**Triad 6**  
+1. If it rains, the ground gets wet.  
+2. It is raining.  
+3. The ground is covered with a tarp.  
+**Question:** Is the ground wet?  
+**Answer:** Inconclusive  
+
+**Modified version**  
+1. If it rains, the ground gets wet.  
+2. It is raining.  
+3. The ground is uncovered.  
+**New conclusion:** Yes  
+
+---  
+
+**Triad 7**  
+1. No reptiles have feathers.  
+2. All snakes are reptiles.  
+3. This animal is a snake.  
+**Question:** Does the animal have feathers?  
+**Answer:** No  
+
+**Modified version**  
+1. No reptiles have feathers.  
+2. Some snakes are feathered in myths.  
+3. This animal is a snake.  
+**New conclusion:** No (real‑world logic still applies).  
+
+---  
+
+**Triad 8**  
+1. If a number is divisible by 4, it is even.  
+2. 24 is divisible by 4.  
+3. 24 is a prime number.  
+**Question:** Is 24 even?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a number is divisible by 4, it is even.  
+2. 22 is divisible by 4.  
+3. 22 is a prime number.  
+**New conclusion:** Inconclusive (22 is not actually divisible by 4).  
+
+---  
+
+**Triad 9**  
+1. All roses are flowers.  
+2. This plant is a rose.  
+3. No flowers are vegetables.  
+**Question:** Is the plant a vegetable?  
+**Answer:** No  
+
+**Modified version**  
+1. All roses are flowers.  
+2. This plant is a tulip.  
+3. No flowers are vegetables.  
+**New conclusion:** No (tulip is also a flower).  
+
+---  
+
+**Triad 10**  
+1. If a book is a bestseller, it sold over 1 million copies.  
+2. “The Skyward Path” is a bestseller.  
+3. “The Skyward Path” is a science‑fiction novel.  
+**Question:** Did “The Skyward Path” sell over 1 million copies?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a book is a bestseller, it sold over 1 million copies.  
+2. “The Skyward Path” is a classic novel.  
+3. “The Skyward Path” is a science‑fiction novel.  
+**New conclusion:** Inconclusive  
+
+---  
+
+**Triad 11**  
+1. No circles have corners.  
+2. Shape X is a circle.  
+3. Shape X is drawn on paper.  
+**Question:** Does Shape X have corners?  
+**Answer:** No  
+
+**Modified version**  
+1. No circles have corners.  
+2. Shape X is an ellipse.  
+3. Shape X is drawn on paper.  
+**New conclusion:** Inconclusive (ellipse also lacks corners, but the premise changed).  
+
+---  
+
+**Triad 12**  
+1. All mammals breathe air.  
+2. Dolphins are mammals.  
+3. Dolphins live in water.  
+**Question:** Do dolphins breathe air?  
+**Answer:** Yes  
+
+**Modified version**  
+1. All mammals breathe air.  
+2. Dolphins are fish.  
+3. Dolphins live in water.  
+**New conclusion:** Inconclusive (the premise “Dolphins are mammals” is altered).  
+
+---  
+
+**Triad 13**  
+1. If a person is a chef, they can cook.  
+2. Maya is a chef.  
+3. Maya enjoys painting.  
+**Question:** Can Maya cook?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a person is a chef, they can cook.  
+2. Maya is a food critic.  
+3. Maya enjoys painting.  
+**New conclusion:** No (the antecedent is false).  
+
+---  
+
+**Triad 14**  
+1. No metal conducts electricity without a power source.  
+2. Copper is a metal.  
+3. The copper wire is connected to a battery.  
+**Question:** Does the copper wire conduct electricity?  
+**Answer:** Yes  
+
+**Modified version**  
+1. No metal conducts electricity without a power source.  
+2. Copper is a metal.  
+3. The copper wire is isolated.  
+**New conclusion:** No  
+
+---  
+
+**Triad 15**  
+1. All planets orbit a star.  
+2. Pluto is classified as a dwarf planet.  
+3. Dwarf planets orbit a star.  
+**Question:** Does Pluto orbit a star?  
+**Answer:** Yes  
+
+**Modified version**  
+1. All planets orbit a star.  
+2. Pluto is a comet.  
+3. Comets orbit a star.  
+**New conclusion:** Inconclusive (the classification change breaks the original chain).  
+
+---  
+
+**Triad 16**  
+1. If a person is allergic to peanuts, they cannot eat peanut butter.  
+2. Sam is allergic to peanuts.  
+3. Sam ate a peanut‑free sandwich.  
+**Question:** Could Sam eat peanut butter?  
+**Answer:** No  
+
+**Modified version**  
+1. If a person is allergic to peanuts, they cannot eat peanut butter.  
+2. Sam is allergic to tree nuts, not peanuts.  
+3. Sam ate a peanut‑free sandwich.  
+**New conclusion:** Yes (the antecedent no longer applies).  
+
+---  
+
+**Triad 17**  
+1. Every prime number greater than 2 is odd.  
+2. 13 is a prime number.  
+3. 13 is greater than 2.  
+**Question:** Is 13 odd?  
+**Answer:** Yes  
+
+**Modified version**  
+1. Every prime number greater than 2 is odd.  
+2. 2 is a prime number.  
+3. 2 is greater than 2.  
+**New conclusion:** Inconclusive (statement 3 is false).  
+
+---  
+
+**Triad 18**  
+1. No fish can live out of water indefinitely.  
+2. Goldfish are fish.  
+3. The goldfish is placed on a table.  
+**Question:** Will the goldfish survive indefinitely?  
+**Answer:** No  
+
+**Modified version**  
+1. No fish can live out of water indefinitely.  
+2. Goldfish are amphibians.  
+3. The goldfish is placed on a table.  
+**New conclusion:** Inconclusive (the premise about goldfish changes).  
+
+---  
+
+**Triad 19**  
+1. If a shape has three sides, it is a triangle.  
+2. Figure A has three sides.  
+3. Figure A is drawn with straight edges.  
+**Question:** Is Figure A a triangle?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a shape has three sides, it is a triangle.  
+2. Figure A has three curved sides.  
+3. Figure A is drawn with straight edges.  
+**New conclusion:** No (the antecedent fails).  
+
+---  
+
+**Triad 20**  
+1. All squares have equal side lengths.  
+2. Shape B is a square.  
+3. Shape B has four sides.  
+**Question:** Does Shape B have equal side lengths?  
+**Answer:** Yes  
+
+**Modified version**  
+1. All squares have equal side lengths.  
+2. Shape B is a rectangle.  
+3. Shape B has four sides.  
+**New conclusion:** Inconclusive  
+
+---  
+
+**Triad 21**  
+1. If a person is a pilot, they have a license.  
+2. Elena is a pilot.  
+3. Elena has a medical certificate.  
+**Question:** Does Elena have a pilot’s license?  
+**Answer:** Yes (by the conditional, assuming the premise is true).  
+
+**Modified version**  
+1. If a person is a pilot, they have a license.  
+2. Elena is a flight attendant.  
+3. Elena has a medical certificate.  
+**New conclusion:** No (the antecedent is false).  
+
+---  
+
+**Triad 22**  
+1. No circles are squares.  
+2. Shape C is a circle.  
+3. Shape C is drawn in red.  
+**Question:** Is Shape C a square?  
+**Answer:** No  
+
+**Modified version**  
+1. No circles are squares.  
+2. Shape C is a sphere.  
+3. Shape C is drawn in red.  
+**New conclusion:** Inconclusive (sphere is not a 2‑D shape, so the original premise does not address it).  
+
+---  
+
+**Triad 23**  
+1. If a device runs on battery, it can be portable.  
+2. The camera runs on battery.  
+3. The camera weighs 2 kg.  
+**Question:** Is the camera portable?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a device runs on battery, it can be portable.  
+2. The camera runs on mains electricity.  
+3. The camera weighs 2 kg.  
+**New conclusion:** No  
+
+---  
+
+**Triad 24**  
+1. All mammals give live birth.  
+2. Platypus is a mammal.  
+3. Platypus lays eggs.  
+**Question:** Does the platypus give live birth?  
+**Answer:** Inconclusive (the premise “All mammals give live birth” is false for monotremes).  
+
+**Modified version**  
+1. All mammals give live birth.  
+2. Platypus is a reptile.  
+3. Platypus lays eggs.  
+**New conclusion:** No (reptiles do not give live birth in this context).  
+
+---  
+
+**Triad 25**  
+1. If a number is a multiple of 5, it ends in 0 or 5.  
+2. 85 is a multiple of 5.  
+3. 85 is an integer.  
+**Question:** Does 85 end in 0 or 5?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a number is a multiple of 5, it ends in 0 or 5.  
+2. 84 is a multiple of 5.  
+3. 84 is an integer.  
+**New conclusion:** Inconclusive  
+
+---  
+
+**Triad 26**  
+1. No humans can breathe underwater unaided.  
+2. Alex is a human.  
+3. Alex is wearing a scuba mask.  
+**Question:** Can Alex breathe underwater unaided?  
+**Answer:** No  
+
+**Modified version**  
+1. No humans can breathe underwater unaided.  
+2. Alex is a mermaid.  
+3. Alex is wearing a scuba mask.  
+**New conclusion:** Inconclusive (the premise about Alex’s species changes).  
+
+---  
+
+**Triad 27**  
+1. All rectangles have opposite sides equal.  
+2. Figure D is a rectangle.  
+3. Figure D has four right angles.  
+**Question:** Are opposite sides of Figure D equal?  
+**Answer:** Yes  
+
+**Modified version**  
+1. All rectangles have opposite sides equal.  
+2. Figure D is a parallelogram.  
+3. Figure D has four right angles.  
+**New conclusion:** Inconclusive (parallelogram may or may not have equal opposite sides).  
+
+---  
+
+**Triad 28**  
+1. If a plant is a cactus, it stores water.  
+2. This plant is a cactus.  
+3. The plant is located in a desert.  
+**Question:** Does the plant store water?  
+**Answer:** Yes  
+
+**Modified version**  
+1. If a plant is a cactus, it stores water.  
+2. This plant is a succulent, not a cactus.  
+3. The plant is located in a desert.  
+**New conclusion:** Inconclusive  
+
+---  
+
+**Triad 29**  
+1. No squares have diagonals that are longer than their sides.  
+2. Shape E is a square.  
+3. Shape E’s diagonal measures √2 times its side.  
+**Question:** Is Shape E’s diagonal longer than its side?  
+**Answer:** Yes (which shows the premise is false, but the logical answer to the question is “Yes”).  
+
+**Modified version**  
+1. No squares have diagonals that are longer than their sides.  
+2. Shape E is a rhombus with equal sides.  
+3. Shape E’s diagonal measures √2 times its side.  
+**New conclusion:** Inconclusive  
+
+---  
+
+**Triad 30**  
+1. If a vehicle runs on diesel, it emits soot.  
+2. The truck runs on diesel.  
+3. The truck has a catalytic converter.  
+**Question:** Does the truck emit soot?  
+**Answer:** Yes (the conditional holds regardless of the converter).  
+
+**Modified version**  
+1. If a vehicle runs on diesel, it emits soot.  
+2. The truck runs on electric power.  
+3. The truck has a catalytic converter.  
+**New conclusion:** No (the antecedent is false).  

@@ -1,0 +1,417 @@
+**Dyad 1**
+1. All squares have four equal sides.
+2. Figure A is a square.
+**Question:** Does Figure A have four equal sides?
+**Answer:** Yes
+
+**Modified Dyad 1**
+1. Figure A is painted red.
+2. The paint used shrinks when dried.
+**Question:** Does Figure A have four equal sides?
+**Answer:** Yes
+
+---
+
+**Dyad 2**
+1. No metal expands when cooled below 0 °C.
+2. The rod in the lab is made of metal.
+**Question:** Will the rod contract when placed in a freezer at –20 °C?
+**Answer:** No
+
+**Modified Dyad 2**
+1. The rod is coated with a polymer that expands when cooled.
+2. The polymer layer is 2 mm thick.
+**Question:** Will the rod contract when placed in a freezer at –20 °C?
+**Answer:** No
+
+---
+
+**Dyad 3**
+1. If a number is divisible by 4, it is even.
+2. 28 is divisible by 4.
+**Question:** Is 28 even?
+**Answer:** Yes
+
+**Modified Dyad 3**
+1. 28 is also a multiple of 7.
+2. Numbers divisible by 7 are sometimes odd.
+**Question:** Is 28 even?
+**Answer:** Yes
+
+---
+
+**Dyad 4**
+1. Every bird that can fly has feathers.
+2. Penguins cannot fly.
+**Question:** Do penguins have feathers?
+**Answer:** Inconclusive
+
+**Modified Dyad 4**
+1. Penguins are covered in waterproof plumage.
+2. Waterproof plumage is a type of feather.
+**Question:** Do penguins have feathers?
+**Answer:** Yes
+
+---
+
+**Dyad 5**
+1. All primes greater than 2 are odd.
+2. 17 is a prime number.
+**Question:** Is 17 odd?
+**Answer:** Yes
+
+**Modified Dyad 5**
+1. 17 is also a Fermat prime.
+2. Fermat primes are sometimes considered even in certain algebraic structures.
+**Question:** Is 17 odd?
+**Answer:** Yes
+
+---
+
+**Dyad 6**
+1. If a shape has three sides, it is a triangle.
+2. Shape X has three sides.
+**Question:** Is Shape X a triangle?
+**Answer:** Yes
+
+**Modified Dyad 6**
+1. Shape X has one right angle.
+2. Shapes with a right angle and three sides are right triangles.
+**Question:** Is Shape X a triangle?
+**Answer:** Yes
+
+---
+
+**Dyad 7**
+1. No liquid boils at 50 °C at sea level.
+2. Water boils at 100 °C at sea level.
+**Question:** Does water boil at 50 °C at sea level?
+**Answer:** No
+
+**Modified Dyad 7**
+1. The pressure in the container is reduced to one‑half atmospheric.
+2. At half atmospheric pressure, water boils at 50 °C.
+**Question:** Does water boil at 50 °C at sea level?
+**Answer:** No
+
+---
+
+**Dyad 8**
+1. If a hypothesis is falsified, it is not true.
+2. Experiment B falsified hypothesis H.
+**Question:** Is hypothesis H true?
+**Answer:** No
+
+**Modified Dyad 8**
+1. Hypothesis H was later revised to H′.
+2. H′ is not falsified by any experiment.
+**Question:** Is hypothesis H true?
+**Answer:** No
+
+---
+
+**Dyad 9**
+1. All mammals give live birth.
+2. The platypus is a mammal.
+**Question:** Does the platypus give live birth?
+**Answer:** No
+
+**Modified Dyad 9**
+1. The platypus lays eggs.
+2. Laying eggs is a form of live birth in monotremes.
+**Question:** Does the platypus give live birth?
+**Answer:** Inconclusive
+
+---
+
+**Dyad 10**
+1. If a function is continuous on a closed interval, it attains a maximum.
+2. f(x)=sin x is continuous on [0, π].
+**Question:** Does f attain a maximum on [0, π]?
+**Answer:** Yes
+
+**Modified Dyad 10**
+1. The interval is changed to (0, π).
+2. f(x)=sin x is still continuous on (0, π).
+**Question:** Does f attain a maximum on (0, π)?
+**Answer:** Yes
+
+---
+
+**Dyad 11**
+1. All squares are rectangles.
+2. Figure B is a square.
+**Question:** Is Figure B a rectangle?
+**Answer:** Yes
+
+**Modified Dyad 11**
+1. Figure B is also a rhombus.
+2. Every rhombus is a parallelogram.
+**Question:** Is Figure B a rectangle?
+**Answer:** Yes
+
+---
+
+**Dyad 12**
+1. If a number ends in 0 or 5, it is divisible by 5.
+2. 85 ends in 5.
+**Question:** Is 85 divisible by 5?
+**Answer:** Yes
+
+**Modified Dyad 12**
+1. 85 is also a multiple of 17.
+2. Multiples of 17 are sometimes not divisible by 5.
+**Question:** Is 85 divisible by 5?
+**Answer:** Yes
+
+---
+
+**Dyad 13**
+1. No planet farther from the Sun than Earth can have a shorter orbital period than Earth.
+2. Mars is farther from the Sun than Earth.
+**Question:** Does Mars have a shorter orbital period than Earth?
+**Answer:** No
+
+**Modified Dyad 13**
+1. Mars' orbit is highly elliptical.
+2. At perihelion, Mars moves faster than Earth.
+**Question:** Does Mars have a shorter orbital period than Earth?
+**Answer:** No
+
+---
+
+**Dyad 14**
+1. If a graph is bipartite, it contains no odd cycles.
+2. Graph G is bipartite.
+**Question:** Does G contain an odd cycle?
+**Answer:** No
+
+**Modified Dyad 14**
+1. A new edge is added creating a triangle.
+2. The graph remains labeled as bipartite in the report.
+**Question:** Does G contain an odd cycle?
+**Answer:** Yes
+
+---
+
+**Dyad 15**
+1. All humans are mortal.
+2. Socrates was a human.
+**Question:** Is Socrates mortal?
+**Answer:** Yes
+
+**Modified Dyad 15**
+1. Socrates is considered a mythological figure.
+2. Mythological figures are not subject to mortality.
+**Question:** Is Socrates mortal?
+**Answer:** Inconclusive
+
+---
+
+**Dyad 16**
+1. If a set is finite, it has a maximum element under a total order.
+2. Set S = {2, 4, 6} is finite.
+**Question:** Does S have a maximum element?
+**Answer:** Yes
+
+**Modified Dyad 16**
+1. The total order is changed to “divides”.
+2. Under “divides”, 6 does not divide any other element of S.
+**Question:** Does S have a maximum element?
+**Answer:** Yes
+
+---
+
+**Dyad 17**
+1. If a road is one‑way, traffic can travel only in its designated direction.
+2. Oak Street is one‑way eastbound.
+**Question:** Can traffic travel west on Oak Street?
+**Answer:** No
+
+**Modified Dyad 17**
+1. A temporary detour permits two‑way travel on Oak Street.
+2. The detour is in effect for the next 24 hours.
+**Question:** Can traffic travel west on Oak Street?
+**Answer:** Yes
+
+---
+
+**Dyad 18**
+1. All even integers are divisible by 2.
+2. –14 is even.
+**Question:** Is –14 divisible by 2?
+**Answer:** Yes
+
+**Modified Dyad 18**
+1. –14 is expressed in binary as 1110₂.
+2. Binary numbers ending in 0 are even.
+**Question:** Is –14 divisible by 2?
+**Answer:** Yes
+
+---
+
+**Dyad 19**
+1. If a language is tonal, pitch changes affect meaning.
+2. Mandarin Chinese is tonal.
+**Question:** Does pitch affect meaning in Mandarin?
+**Answer:** Yes
+
+**Modified Dyad 19**
+1. A speaker uses a monotone recording.
+2. Monotone recordings remove pitch variation.
+**Question:** Does pitch affect meaning in Mandarin?
+**Answer:** Inconclusive
+
+---
+
+**Dyad 20**
+1. If a circuit is open, current cannot flow.
+2. The switch in Circuit C is open.
+**Question:** Does current flow in Circuit C?
+**Answer:** No
+
+**Modified Dyad 20**
+1. A parallel branch bypasses the switch.
+2. The bypass branch is closed.
+**Question:** Does current flow in Circuit C?
+**Answer:** Yes
+
+---
+
+**Dyad 21**
+1. All prime numbers greater than 3 are of the form 6k ± 1.
+2. 31 = 6·5 + 1.
+**Question:** Is 31 of the form 6k ± 1?
+**Answer:** Yes
+
+**Modified Dyad 21**
+1. 31 is also expressed as 2·15 + 1.
+2. The expression 2·n + 1 does not guarantee the 6k ± 1 pattern.
+**Question:** Is 31 of the form 6k ± 1?
+**Answer:** Yes
+
+---
+
+**Dyad 22**
+1. If a person is allergic to peanuts, they react to peanut oil.
+2. Alex is allergic to peanuts.
+**Question:** Will Alex react to peanut oil?
+**Answer:** Yes
+
+**Modified Dyad 22**
+1. The peanut oil is highly refined, removing protein allergens.
+2. Refined oils often do not trigger peanut allergies.
+**Question:** Will Alex react to peanut oil?
+**Answer:** Inconclusive
+
+---
+
+**Dyad 23**
+1. If an integer n is divisible by 9, the sum of its digits is divisible by 9.
+2. 5,832 is divisible by 9.
+**Question:** Is the digit sum of 5,832 divisible by 9?
+**Answer:** Yes
+
+**Modified Dyad 23**
+1. The digit sum of 5,832 is 5 + 8 + 3 + 2 = 18.
+2. 18 is divisible by 9.
+**Question:** Is the digit sum of 5,832 divisible by 9?
+**Answer:** Yes
+
+---
+
+**Dyad 24**
+1. No animal can survive without water indefinitely.
+2. The desert lizard can go months without drinking.
+**Question:** Can the desert lizard survive indefinitely without water?
+**Answer:** No
+
+**Modified Dyad 24**
+1. The lizard absorbs moisture from dew.
+2. Dew provides enough water for indefinite survival.
+**Question:** Can the desert lizard survive indefinitely without water?
+**Answer:** Inconclusive
+
+---
+
+**Dyad 25**
+1. If a statement is a tautology, it is always true.
+2. “Either it rains or it does not rain” is a tautology.
+**Question:** Is the statement always true?
+**Answer:** Yes
+
+**Modified Dyad 25**
+1. The statement is rephrased as “It is not the case that it both rains and does not rain.”
+2. This reformulation is a contradiction.
+**Question:** Is the statement always true?
+**Answer:** No
+
+---
+
+**Dyad 26**
+1. All elements with atomic number 1 are hydrogen.
+2. The particle with atomic number 1 is a proton.
+**Question:** Is the particle hydrogen?
+**Answer:** Yes
+
+**Modified Dyad 26**
+1. In a plasma, protons are stripped from electrons.
+2. Stripped protons are not bound as hydrogen atoms.
+**Question:** Is the particle hydrogen?
+**Answer:** Inconclusive
+
+---
+
+**Dyad 27**
+1. If a triangle has two equal sides, it is isosceles.
+2. Triangle T has sides 5 cm, 5 cm, 8 cm.
+**Question:** Is Triangle T isosceles?
+**Answer:** Yes
+
+**Modified Dyad 27**
+1. The 8 cm side is mismeasured; it is actually 5 cm.
+2. All three sides are equal now.
+**Question:** Is Triangle T isosceles?
+**Answer:** Yes
+
+---
+
+**Dyad 28**
+1. No object can exceed the speed of light in vacuum.
+2. A photon travels at the speed of light.
+**Question:** Does the photon exceed the speed of light?
+**Answer:** No
+
+**Modified Dyad 28**
+1. In a medium, light slows to 0.8 c.
+2. The photon moves at 0.9 c in that medium.
+**Question:** Does the photon exceed the speed of light?
+**Answer:** Yes (exceeds the medium’s light speed, but not c in vacuum – conclusion remains “Yes” for the given context)
+
+---
+
+**Dyad 29**
+1. If a map is drawn to scale, distances on the map are proportional to real distances.
+2. The city map is drawn to a 1:10,000 scale.
+**Question:** Are distances on the map proportional to real distances?
+**Answer:** Yes
+
+**Modified Dyad 29**
+1. The map’s legend mislabels the scale as 1:5,000.
+2. Users calculate distances using the incorrect scale.
+**Question:** Are distances on the map proportional to real distances?
+**Answer:** Inconclusive
+
+---
+
+**Dyad 30**
+1. If a number is a perfect square, its square root is an integer.
+2. 144 is a perfect square.
+**Question:** Is √144 an integer?
+**Answer:** Yes
+
+**Modified Dyad 30**
+1. 144 is expressed in base 7 as 261₂.
+2. In base 7, the square root of 261₂ is not an integer.
+**Question:** Is √144 an integer?
+**Answer:** Yes (the integer nature of the root does not depend on numeral base)
