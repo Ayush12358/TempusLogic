@@ -52,17 +52,16 @@ This object is an emerald. New conclusion: Inconclusive
 ## Project Structure
 ```
 tempuslogic/
-├── data/            # Contains the data files
+├── data/                     # Contains the data files
 │
-├── dyads_gpt5.txt   # GPT-5 dyad examples
+├── dyads_gpt5.txt            # GPT-5 dyad examples
 │
-└── triads_gpt5.txt  # GPT-5 triad examples
-├── eval_utils.py    # Utilities for parsing and evaluating
-├── dyad_eval.py     # Evaluation script for dyads
-├── req.py           # API request handler
-├── keys.py          # API keys (keep private!)
-├── dyads.py         # Dyad generator script
-└── triads.py        # Triad generator script
+└── triads_gpt5.txt           # GPT-5 triad examples
+├── eval_utils.py             # Utilities for parsing and evaluating
+├── eval.py                   # Evaluation script for dyads
+├── req.py                    # API request handler
+├── keys.py                   # API keys (keep private!)
+└── dyad_triad_gen.py         # Dyad and Triad generator script
 ```
 ## How to Run
 
@@ -71,16 +70,17 @@ tempuslogic/
 1. Make sure you have the required dependencies:
    bash
    pip install requests
-Add your API keys to keys.py:
+2. Add your API keys to keys.py:
 - OPENROUTER = "your-openrouter-api-key"
 - GROQ = "your-groq-api-key"
-#### Generate New Logical Problems
+3. Generate New Logical Problems
 To generate new dyads and triads, run:
 ```python dyad_triad_gen.py```
-Evaluate Model Performance
+The Generation of these problems was done with GPT-oss-120b
+
+4. Evaluate Model Performance
 Run the evaluation script on dyads:
 `python eval.py`
-The Generation of these problems was done with GPT-oss-120b
 This will:
 - Load existing dyad problems from data/dyads_gpt5.txt and data/triads_gpt5.txt
 - Query the model for answers through the API
