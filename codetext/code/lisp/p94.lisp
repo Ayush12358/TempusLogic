@@ -1,0 +1,32 @@
+(defun p94 (n k)
+  (remove-duplicates
+    (make-graphs k (p22 1 n))
+    :test #'p85))
+
+(defun make-graphs (deg nodes &optional (nodes-left nodes) edges)
+  (if (null nodes-left)
+      (list (make-graph nodes edges))
+      (mapcan (lambda (comb)
+                (and (every (lambda (n) 
+                              (< (degree-from-edges n edges) deg)) 
+                       comb)
+                     (every (lambda (e) 
+                              (set-difference (list (car nodes-left))
+                                (set-difference (nodes e) comb)))
+                       edges)
+                     (make-graph deg nodes (cdr nodes-left) 
+                       (append (mapcar (lambda (n) (cons (car nodes-left) n)) comb) edges))))
+        (combinations (cdr nodes-left) 
+                      (- deg (degree-from-edges (car nodes-left) edges))))))
+
+(defun combinations (set k)
+  (cond ((= k 0) (list NIL))
+        ((null set) NIL)
+        (T (append (mapcar (lambda (comb) (cons (car set) comb))
+                     (combinations (cdr set) (1- k)))
+                   (combinations (cdr set) k)))))
+
+(defun degree-from-edges (node edges)
+  (loop for e in edges
+    if (member node (nodes e))
+    sum 1))

@@ -1,0 +1,37 @@
+(defun p90 (&optional (n 8))
+  (mapcan (lambda (r) (try-row r n)) (p22 1 n)))
+
+(defun try-row (row &optional (n 8) (col 1) visited)
+  (if (= col n)
+      (list (list row))
+      (mapcan (lambda (r)
+                (mapcar (lambda (sol) (cons row sol))
+                  (remove-if (lambda (sol) (incompatible-p row sol))
+                    (try-row r n (1+ col) (cons row visited)))))
+              (set-difference (p22 1 n) (cons row visited)))))
+
+(defun incompatible-p (row sol)
+  (do ((up (1- row) (1- up))
+       (down (1+ row) (1+ down)))
+      ((null sol))
+      (when (member (pop sol) (list up down))
+        (return T))))
+
+(defun p91 (&optional (n 8) (m (* n n)) (visited (list (cons 1 1))))
+  (if (= m 0)
+      visited
+      (mapcan (lambda (next)
+                (p91 n (1- m) (cons next visited)))
+              (set-difference (next-squares (car visited) n) visited))))
+
+(defun next-squares (sq n)
+  (remove-if (lambda (next) 
+               (or (out-of-bounds (car next) n)
+                   (out-of-bounds (cdr next) n)))
+    (mapcar (lambda (move) 
+              (cons (+ (car move) (car sq))
+                    (+ (cdr move) (cdr sq))))
+      (knight-moves))))
+
+(defun knight-moves ()
+  '((1 . 2) (2 . 1) (-1 . 2) (2 . -1) (-1 . -2) (-2 . -1) (1 . -2) (-2 . 1)))

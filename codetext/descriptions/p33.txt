@@ -1,0 +1,1 @@
+Determine whether two positive integer numbers are coprime.

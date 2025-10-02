@@ -1,0 +1,66 @@
+(defun p67a (tree)
+  (if tree
+      (if (or (second tree) (third tree))
+          (format nil "~a(~a,~a)" (first tree) 
+                                  (p67a (second tree)) 
+                                  (p67a (third tree)))
+          (first tree))
+      ""))
+
+(defun p67b (str)
+  (when (> (length str) 0)
+    (if (char= (char str (1- (length str))) #\))
+        (do* ((p1 (position #\( str))
+              (depth 0)
+              (p (1+ p1) (1+ p)))
+             ((or (null p1) (>= p (length str))))
+             (and (= depth 0)
+                  (char= (char str p) #\,)
+               (return-from NIL
+                 (list (intern (string-upcase (subseq str 0 p1)))
+                       (p67b (subseq str (1+ p1) p))
+                       (p67b (subseq str (1+ p) (1- (length str)))))))
+             (case (char str p)
+               (#\( (incf depth))
+               (#\) (decf depth))))
+        (list (intern (string-upcase str)) NIL NIL))))
+
+(defun inorder (tree)
+  (when tree
+    (nconc (inorder (second tree))
+      (cons (first tree) 
+            (inorder (third tree))))))
+
+(defun preorder (tree)
+  (when tree
+    (cons (first tree)
+      (nconc (preorder (second tree))
+             (preorder (third tree))))))
+
+(defun p68 (pre in)
+  (and pre in 
+       (= (length (union pre in))
+          (min (length pre) (length in)))
+       (let* ((p1 (position (first pre) in))
+              (p2 (position (first (last (subseq in 0 p1))) pre)))
+         (list (first pre)
+               (and p2 (p68 (subseq pre 1 (1+ p2)) (subseq in 0 p1)))
+               (and p1 p2 (p68 (subseq pre (1+ p2)) (subseq in (1+ p1))))))))
+
+(defun p69a (tree)
+  (if tree
+      (format nil "~a~a~a" (first tree)
+        (p69a (second tree))
+        (p69a (third tree)))
+      "."))
+
+(defun p69b (str)
+  (do ((i (1- (length str)) (1- i))
+       (stack NIL))
+      ((< i 0) (pop stack))
+      (case (char str i)
+        (#\. (push NIL stack))
+        (T (push (list (intern (make-string 1 :initial-element (char-upcase (char str i))))
+                       (pop stack)
+                       (pop stack))
+                 stack)))))

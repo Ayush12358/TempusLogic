@@ -1,0 +1,1 @@
+Eliminate consecutive duplicates of list elements.
