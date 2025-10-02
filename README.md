@@ -50,29 +50,20 @@ Some precious stones are used in jewelry.
 This object is an emerald. New conclusion: Inconclusive
 
 ## Project Structure
-
+```
 tempuslogic/
-├── data/
-# Contains the data files
+├── data/            # Contains the data files
 │
-├── dyads_gpt5.txt
-# GPT-5 dyad examples
+├── dyads_gpt5.txt   # GPT-5 dyad examples
 │
-└── triads_gpt5.txt
-# GPT-5 triad examples
-├── eval_utils.py
-# Utilities for parsing and evaluating
-├── dyad_eval.py
-# Evaluation script for dyads
-├── req.py
-# API request handler
-├── keys.py
-# API keys (keep private!)
-├── dyads.py
-# Dyad generator script
-└── triads.py
-# Triad generator script
-
+└── triads_gpt5.txt  # GPT-5 triad examples
+├── eval_utils.py    # Utilities for parsing and evaluating
+├── dyad_eval.py     # Evaluation script for dyads
+├── req.py           # API request handler
+├── keys.py          # API keys (keep private!)
+├── dyads.py         # Dyad generator script
+└── triads.py        # Triad generator script
+```
 ## How to Run
 
 ### Setup
@@ -131,7 +122,7 @@ Results will be printed to the console and can be redirected to a file for furth
 The model used was Kimi K2 instruct 1T. Heree same , we see that the answers to the modified arguments are visibly worse than the original arguments, showing that the model struggles with contextual changes.
 
 Furthermore, despite the accuracy of the modified arguments being the same for dyads and triads, the recall is worse for triads, indicating that the model struggles more with triads when the context is changed.
-
+```
 === Dyads Original ===
 Accuracy: 0.9667
 Macro Precision: 0.9833
@@ -195,3 +186,4 @@ Confusion Matrix (rows=true, cols=pred):
        YES     0     0     2
         NO     0     1    10
        INC     0     0    17
+```
