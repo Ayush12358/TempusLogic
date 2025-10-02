@@ -119,7 +119,7 @@ Run the evaluation
 ## Results
 
 Results will be printed to the console and can be redirected to a file for further analysis.
-The model used was Kimi K2 instruct 1T. Heree same , we see that the answers to the modified arguments are visibly worse than the original arguments, showing that the model struggles with contextual changes.
+The model used was Kimi K2 instruct 1T. Here, we see that the answers to the modified arguments are visibly worse than the original arguments, showing that the model struggles with contextual changes.
 
 Furthermore, despite the accuracy of the modified arguments being the same for dyads and triads, the recall is worse for triads, indicating that the model struggles more with triads when the context is changed.
 ```
