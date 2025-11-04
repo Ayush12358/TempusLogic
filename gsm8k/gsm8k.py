@@ -2,6 +2,9 @@ import os, time, re
 from google import genai
 import pandas as pd
 from tqdm import tqdm
+from ollama import Client
+import argparse
+
 # answer question
 class GSM8K_Test:
     # initialize with number of bad examples to include in the prompt, number of test examples to evaluate, model name, and api key
@@ -15,7 +18,7 @@ class GSM8K_Test:
         self.df = pd.read_parquet('data/gsm8k_with_bad_llm_answers.parquet')
         
         self.client = genai.Client(api_key=api_key)
-        # self.client = genai.Client(api_key='AIzaSyBvpujYrBWh07wqmP3gm5jgZ3ITmW1vzzo')
+        self.client_ollama = Client()
         self._response_cache = {}
         self.num_bad_examples = num_bad_examples
         self.num_test_examples = num_tests
@@ -36,7 +39,16 @@ class GSM8K_Test:
     def close_log(self):
         self.logger.close()
     # function to generate response from the model, with retries and caching
-    def generate_response(self, prompt, model_name=None, max_retries=5):
+    def generate_response(self, prompt, model_name=None):
+        if model_name is None:
+            model_name = self.model_name
+        response = self.client_ollama.generate(
+            model=model_name,
+            prompt=prompt
+        )
+        text = getattr(response, "text", str(response))
+        return text
+    def gemini_generate_response(self, prompt, model_name=None, max_retries=5):
         if self.retry:
             return self.c_generate_response(prompt, max_retries=max_retries, model_name=model_name)
         else:
@@ -358,11 +370,7 @@ class TestGSM8K:
         scores.to_csv('results/scores.csv', mode='a', header=not os.path.exists('results/scores.csv'))
         return self.final_score
 
-if __name__ == "__main__":
-    # run the tests
-    llms = ["models/gemini-2.5-flash-lite"]
-    num_bad_examples = [1]
-    num_tests = [1]
+def running_all(llms, num_bad_examples, num_tests):
     scores =[]
     for llm in llms:
         # start time
@@ -373,4 +381,27 @@ if __name__ == "__main__":
         # 
         end_time = time.time()
         print (f"\nTotal time taken: {end_time - start_time} seconds")
+    
     print (f"Final scores: {scores}")
+    # slope of the scores
+    slope = (scores[-1] - scores[0]) / (num_bad_examples[-1] - num_bad_examples[0])
+    print (f"Slope of the scores: {slope}")
+
+if __name__ == "__main__":
+    # run the tests
+    # llms = ["models/gemini-2.5-flash-lite"]
+    llms = ["gpt-oss:120b-cloud", "glm-4.6:cloud", "deepseek-v3.1:671b-cloud", "kimi-k2:1t-cloud"] 
+    num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
+    num_tests = [1]
+    # get the following from the args
+    # python gsm8k.py --ollama_models ... --num_bad_examples ... --num_tests ...
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--ollama_models', nargs='+', default=llms, help='List of LLM models to test')
+    parser.add_argument('--num_bad_examples', nargs='+', type=int, default=num_bad_examples, help='List of number of bad examples to test')
+    parser.add_argument('--num_tests', nargs='+', type=int, default=num_tests, help='List of number of tests to run')
+    args = parser.parse_args()
+    llms = args.ollama_models
+    num_bad_examples = args.num_bad_examples
+    num_tests = args.num_tests
+    running_all(llms, num_bad_examples, num_tests)
+

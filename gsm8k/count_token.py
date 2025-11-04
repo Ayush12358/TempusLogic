@@ -13,7 +13,7 @@ def info_tokens(context, i):
 context = ''
 print ('Tokens ---- Average Tokens per sample')
 for i in range(len(df)):
-    context += f'Q: {df.at[i, "question"]}\nA: {df.at[i, "answer"]}\n'
+    context += f'Q: {df.at[i, "question"]}\nA: {df.at[i, "bad llm answer"]}\n'
     tokens = i*817/5.0 # approx 817 tokens in 5 samples
     # i want to print only when tokens exceed certain thresholds
     # ie 1024000, 512000, 256000, 128000, 64000, 32000, 16000, 8000, 4000

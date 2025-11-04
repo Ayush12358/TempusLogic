@@ -1,2 +1,4 @@
 ,combined_avg_score,num_bad_examples,num_test_examples,average_std_dev
 0,0.8888888888888888,1,1,0.2886751345948129
+0,0.0,5,1,0.0
+0,0.0,5,1,0.0
