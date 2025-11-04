@@ -4,6 +4,7 @@ import pandas as pd
 from tqdm import tqdm
 from ollama import Client
 import argparse
+from generate import generate_response, gemini_generate_response
 
 # answer question
 class GSM8K_Test:
@@ -40,83 +41,7 @@ class GSM8K_Test:
         self.logger.close()
     # function to generate response from the model, with retries and caching
     def generate_response(self, prompt, model_name=None):
-        if model_name is None:
-            model_name = self.model_name
-        response = self.client_ollama.generate(
-            model=model_name,
-            prompt=prompt
-        )
-        text = getattr(response, "text", str(response))
-        return text
-    def gemini_generate_response(self, prompt, model_name=None, max_retries=5):
-        if self.retry:
-            return self.c_generate_response(prompt, max_retries=max_retries, model_name=model_name)
-        else:
-            return self.s_generate_response(prompt, model_name=model_name)
-    def c_generate_response(self, prompt, max_retries=5, model_name=None):
-        # Generate content with retries and simple caching.
-        # Respects RetryInfo in error messages if present (e.g. 'retryDelay': '22s').
-        # Set environment variable DRY_RUN=1 to avoid making API calls during development.
-        if model_name is not None:
-            model = model_name
-        else:
-            model = self.model_name
-        # dry-run mode for local testing
-        if os.getenv("DRY_RUN") == "1":
-            return "DRY_RUN_RESPONSE"
-
-        cache_key = (model, prompt)
-        if cache_key in self._response_cache:
-            return self._response_cache[cache_key]
-
-        backoff = 1.0
-        for attempt in range(1, max_retries + 1):
-            try:
-                # small pause between requests to help avoid bursting the quota
-                time.sleep(0.05)
-                response = self.client.models.generate_content(
-                    model=model,
-                    contents=prompt
-                )
-                text = getattr(response, "text", str(response))
-                self._response_cache[cache_key] = text
-                return text
-            except Exception as e:
-                msg = str(e)
-                # try to parse recommended retryDelay like 'retryDelay': '22s'
-                m = re.search(r"retryDelay['\"]?\s*[:=]\s*['\"]?(\d+)s", msg)
-                if m:
-                    delay = int(m.group(1))
-                else:
-                    # fallback exponential backoff with jitter
-                    delay = backoff + (0.1 * attempt)
-
-                # if it's clearly a quota error, wait the suggested time; otherwise exponential backoff
-                if "RESOURCE_EXHAUSTED" in msg or "quota" in msg.lower() or "RetryInfo" in msg:
-                    time.sleep(delay)
-                else:
-                    time.sleep(delay)
-
-                backoff *= 2
-                # final attempt will re-raise if it fails
-                if attempt == max_retries:
-                    raise
-    def s_generate_response(self, prompt, model_name=None):
-        if model_name is None:
-            model_name = self.model_name
-        response = self.client.models.generate_content(
-            model=model_name,
-            contents=prompt
-        )
-        text = getattr(response, "text", str(response))
-        return text
-    def test_generate_response(self):
-        try:
-            response = self.generate_response('What is 2 + 2?')
-        except Exception as e:
-            print(f"Error during testing generate_response.")
-            return
-        print (f"Working!!")
+        return generate_response(self, prompt, model_name=model_name, max_retries=5)
     # evaluate if the generated answer is correct
     def evaluate_answer(self, generated_answer, correct_answer):
         if self.llm_eval:
@@ -370,7 +295,11 @@ class TestGSM8K:
         scores.to_csv('results/scores.csv', mode='a', header=not os.path.exists('results/scores.csv'))
         return self.final_score
 
-def running_all(llms, num_bad_examples, num_tests):
+llms = ["gpt-oss:120b-cloud", "glm-4.6:cloud", "deepseek-v3.1:671b-cloud", "kimi-k2:1t-cloud"] 
+num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
+num_tests = [1]
+
+def running_gsm8k(llms = llms, num_bad_examples = num_bad_examples, num_tests = num_tests):
     scores =[]
     for llm in llms:
         # start time
@@ -390,9 +319,6 @@ def running_all(llms, num_bad_examples, num_tests):
 if __name__ == "__main__":
     # run the tests
     # llms = ["models/gemini-2.5-flash-lite"]
-    llms = ["gpt-oss:120b-cloud", "glm-4.6:cloud", "deepseek-v3.1:671b-cloud", "kimi-k2:1t-cloud"] 
-    num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
-    num_tests = [1]
     # get the following from the args
     # python gsm8k.py --ollama_models ... --num_bad_examples ... --num_tests ...
     parser = argparse.ArgumentParser()
@@ -403,5 +329,4 @@ if __name__ == "__main__":
     llms = args.ollama_models
     num_bad_examples = args.num_bad_examples
     num_tests = args.num_tests
-    running_all(llms, num_bad_examples, num_tests)
-
+    running_gsm8k(llms, num_bad_examples, num_tests)

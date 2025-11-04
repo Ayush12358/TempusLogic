@@ -1,4 +1,4 @@
-from req import gen_dyad, gen_dyad_groq, gen_triad_groq, models
+from req import gen_dyad, gen_dyad_many, gen_triad_many, models
 
 if __name__ == "__main__":
     # for n in range(5):
@@ -8,7 +8,9 @@ if __name__ == "__main__":
     #         print(dyad)
     #         print("\n" + "="*50 + "\n")
     #         open("data/dyads.txt", "a").write(f"Dyad number: {(5*n)+(i+1)}\n{dyad}\n\n{'='*50}\n\n")
-    dyad = gen_dyad_groq()
+    dyad = gen_dyad_many()
     open("data/dyads_gpt5.txt", "a").write(f"{dyad}\n")
-    triad = gen_triad_groq()
+    triad = gen_triad_many()
     open("data/triads_gpt5.txt", "a").write(f"{dyad}\n")
+    print("Done")
+
