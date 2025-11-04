@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TempusLogic Benchmark</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>TempusLogic Benchmark Suite</h1>
+        <p>Evaluate large language models across math, reasoning, and coding challenges.</p>
+        <a class="cta" href="#get-started">Run the tests</a>
+    </header>
+
+    <main>
+        <section class="section" id="about">
+            <h2>About the benchmark</h2>
+            <p>The TempusLogic benchmark orchestrates three targeted evaluations to measure an LLMs general reasoning ability. Results are aggregated in <code>rankings.csv</code> so you can compare model performance at a glance.</p>
+        </section>
+
+        <section class="section" id="suite">
+            <h2>Included test suites</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>GSM8K</h3>
+                    <p>Grade-school math word problems sourced from the GSM8K dataset. Measures multi-step quantitative reasoning.</p>
+                </article>
+                <article class="card">
+                    <h3>Dyad &amp; Triad</h3>
+                    <p>Relationship extraction tasks that probe contextual understanding and logical inference over entity pairs and triplets.</p>
+                </article>
+                <article class="card">
+                    <h3>Coding Test</h3>
+                    <p>Programming challenges covering algorithmic correctness and code quality, run against hidden test cases.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="get-started">
+            <h2>How to run the benchmark</h2>
+            <ol>
+                <li>Install dependencies with <code>pip install -r requirements.txt</code>.</li>
+                <li>Edit <code>tempuslogic.py</code> to list the LLM endpoints you want to evaluate.</li>
+                <li>Execute <code>python tempuslogic.py</code> to launch all test suites.</li>
+                <li>Review the generated plot <code>model_performance.png</code> and the aggregated scores in <code>rankings.csv</code>.</li>
+            </ol>
+        </section>
+
+        <section class="section" id="results">
+            <h2>Latest results</h2>
+            <p>The benchmark appends each test run to <code>rankings.csv</code> sorted by average score. Use the refresh button below to load the newest data while running through a static server.</p>
+            <button id="refresh">Refresh rankings</button>
+            <div id="rankings" class="table-wrapper" aria-live="polite"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 TempusLogic Benchmark Suite.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

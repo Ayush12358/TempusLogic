@@ -1,6 +1,6 @@
-from parse_utils import parse_dyads, parse_triads
-from eval_utils import print_metrics, evaluate
-from req import eval_model
+from dyad_triad.parse_utils import parse_dyads, parse_triads
+from dyad_triad.eval_utils import print_metrics, evaluate
+from dyad_triad.req import eval_model
 import time
 
 dyads = parse_dyads()

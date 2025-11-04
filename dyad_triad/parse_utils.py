@@ -4,7 +4,7 @@ import re
 import json
 from pathlib import Path
 from typing import Dict, List, Any
-from eval_utils import normalize_label
+from dyad_triad.eval_utils import normalize_label
 
 # Default data paths (adjust if you relocate the files)
 DYAD_DATA_PATH = Path(__file__).parent / "data" / "dyads_gpt5.txt"
