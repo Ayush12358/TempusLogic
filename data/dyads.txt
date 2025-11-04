@@ -1,0 +1,244 @@
+Dyad number: 1
+Original Dyad:
+
+1. All mammals have a backbone.
+2. A dolphin is a mammal.
+
+Question: Does a dolphin have a backbone?
+
+Conclusion: Yes.
+
+Modified Dyad:
+
+1. All birds have feathers.
+2. A penguin is a bird.
+3. Some birds can fly.
+4. Penguins live predominantly in cold climates.
+
+Question: Does a penguin have feathers?
+
+Conclusion: Yes.
+
+==================================================
+
+Dyad number: 2
+Original Dyad
+1. All swans are white.
+2. This bird is a swan.
+Question: Is the bird white?
+Answer: Yes
+
+Modified Dyad
+1. All swans are white.
+2. This bird is a swan.
+3. Some swans in certain regions are black due to a genetic mutation.
+4. The bird was observed in one of those regions.
+Question: Is the bird white?
+Answer: Inconclusive
+
+==================================================
+
+Dyad number: 3
+Dyad:
+1) Every room on the 5th floor has a projector.
+2) Room 512 is on the 5th floor.
+Question: Does Room 512 have a projector?
+Conclusion: Yes.
+
+Version with two additional statements (context changed):
+1) Every room on the 5th floor has a projector.
+2) As of today, Room 512 has been relocated to the 4th floor during renovations.
+3) No rooms on the 4th floor have projectors installed.
+4) Room 512 is booked for a presentation this afternoon.
+Question: Does Room 512 have a projector?
+Conclusion: No.
+
+==================================================
+
+Dyad number: 4
+Statement 1: All fruits contain seeds.
+Statement 2: This apple contains seeds.
+Question: Is the apple a fruit?
+Conclusion: Inconclusive. (The apple meets the criteria for being a fruit, but the first statement does not state that only fruits contain seeds.)
+
+***
+
+Statement 1: Only fruits contain seeds.
+Statement 2: This apple contains seeds.
+Statement 3: A tomato is botanically a fruit.
+Statement 4: This object is a tomato.
+Question: Is the object a fruit?
+Conclusion: Yes. (The object is a tomato, and tomatoes are fruits, so it is a fruit.)
+
+==================================================
+
+Dyad number: 5
+ Dyad 1:
+
+Statement 1: All apples are red.
+Statement 2: This fruit is an apple.
+
+Question: Is this fruit red?
+
+Conclusion: Yes.
+
+Dyad 2:
+
+Statement 1: All apples are red.
+Statement 2: This fruit is a pear.
+
+Question: Is this fruit red?
+
+Conclusion: No.
+
+Dyad 3:
+
+Statement 1: All apples are red.
+Statement 2: This fruit is a green apple.
+
+Question: Is this fruit red?
+
+Conclusion: No.
+
+Dyad 4:
+
+Statement 1: All apples are red.
+Statement 2: This fruit is a yellow apple.
+
+Question: Is this fruit red?
+
+Conclusion: No, but it is not inconclusive either. A yellow apple is not a red apple, so the answer is no. However, it is important to note that not all apples are red, and there are varieties that are yellow or green.
+
+==================================================
+
+Dyad number: 6
+**Original Dyad:**
+1. All mammals are warm-blooded.
+2. A dolphin is a mammal.
+Question: Is a dolphin warm-blooded?
+Conclusion: Yes.
+
+**Modified Dyad:**
+1. All mammals are warm-blooded.
+2. A dolphin is a mammal.
+3. Some marine biologists classify dolphins as fish for regulatory purposes.
+4. Regulatory classifications do not alter biological traits.
+Question: Is a dolphin warm-blooded?
+Conclusion: Yes.
+
+==================================================
+
+Dyad number: 7
+### Original Dyad
+1. All birds can fly.
+2. Penguins are birds.
+Question: Can penguins fly?
+Conclusion: Yes.
+
+### Modified Dyad
+1. All birds can fly.
+2. Penguins are birds.
+3. Penguins have adapted to swim instead of fly.
+4. Some flightless birds exist in nature.
+Question: Can penguins fly?
+Conclusion: No.
+
+==================================================
+
+Dyad number: 8
+**Original Dyad:**
+Statement 1: All roses are flowers.
+Statement 2: This plant is a rose.
+Question: Is this plant a flower?
+Conclusion: Yes.
+
+**Modified Dyad:**
+Statement 1: All roses are flowers.
+Statement 2: This plant is a rose.
+Statement 3: Some flowers are artificial.
+Statement 4: This plant is artificial.
+Question: Is this plant a flower?
+Conclusion: No.
+
+==================================================
+
+Dyad number: 9
+**Original Dyad:**
+
+Statement 1: All birds can fly.
+Statement 2: A penguin is a bird.
+Question: Can a penguin fly?
+
+Conclusion: No.
+
+---
+
+**Modified Dyad:**
+
+Statement 1: All birds have feathers.
+Statement 2: A penguin is a bird.
+Statement 3: All animals that can fly have feathers.
+Statement 4: Some flightless birds live in cold climates.
+Question: Can a penguin fly?
+
+Conclusion: Inconclusive.
+
+==================================================
+
+Dyad number: 10
+Statement 1: All cars that are red are fast.
+Statement 2: John's car is fast.
+Question: Is John's car red?
+Conclusion: Inconclusive.
+
+Statement 1: All cars that are red are fast.
+Statement 2: John's car is fast.
+Statement 3: Only sports cars are fast.
+Statement 4: John's car is a blue sports car.
+Question: Is John's car red?
+Conclusion: No.
+
+==================================================
+
+Dyad number: 6
+Original Dyad:
+
+1. All cats are mammals.
+2. Some mammals are white.
+
+Question: Can we conclude that some cats are white?
+
+Conclusion: Inconclusive.
+
+Modified Dyad:
+
+1. All cats are mammals.
+2. Some mammals are nocturnal.
+3. All birds lay eggs.
+4. Some mammals are white.
+
+Question: Can we conclude that some cats are nocturnal?
+
+Conclusion: Inconclusive.
+
+==================================================
+
+Dyad number: 7
+Error: Provider returned error
+
+==================================================
+
+Dyad number: 8
+Dyad:
+- Statement 1: All swans in Lake Azure are white.
+- Statement 2: Bird X is a swan that lives in Lake Azure.
+Question: Is Bird X white?
+Conclusion: Yes.
+
+Modified dyad:
+- Statement 1: Most swans in Lake Azure are white. (context changed)
+- Statement 2: Bird X is a swan that lives in Lake Azure.
+- Statement 3: Exactly 60% of swans in Lake Azure are white and 40% are black.
+- Statement 4: Bird X’s individual color has not been observed.
+Question: Is Bird X white?
+Conclusion: Inconclusive.

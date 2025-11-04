@@ -1,230 +1,166 @@
 # TempusLogic
 
-Project repository for the course Advanced Natural Language Processing.
+TempusLogic bundles two complementary evaluation tracks for advanced natural language processing research:
 
-## Overview
+1. Logical reasoning diagnostics based on custom dyad and triad arguments.
+2. Mathematical reasoning stress tests on the GSM8K benchmark with adversarial prompting.
 
-TempusLogic is a comprehensive testing framework designed to evaluate Large Language Models (LLMs) on mathematical reasoning tasks using the GSM8K dataset. The project investigates how LLMs perform when prompted with correct answers, incorrect answers, or no prior examples, providing insights into in-context learning and reasoning capabilities.
+The repository is organised so you can run either track independently or compare results across both to understand model robustness to context edits and misleading exemplars.
 
-## Project Structure
+## Repository Layout
 
-```
+```text
 TempusLogic/
-├── gsm8k/
-│   ├── bad_answers.py          # Generates incorrect LLM answers for training data
-│   ├── test.py                 # Main testing framework
-│   ├── count_token.py          # Token counting utilities
-│   ├── test.ipynb              # Interactive Jupyter notebook for experiments
+├── data/                          # Shared data assets
+├── dyad_triad_gen.py              # Generator for dyad/triad problem sets
+├── eval.py                        # Evaluation script for logical reasoning
+├── eval_utils.py                  # Parsing and scoring helpers for dyads/triads
+├── gsm8k/                         # GSM8K robustness experiments
+│   ├── bad_answers.py
+│   ├── count_token.py
+│   ├── test.py
 │   ├── data/
-│   │   ├── gsm8k_train.parquet           # Original GSM8K training dataset
-│   │   └── gsm8k_with_bad_llm_answers.parquet  # Dataset augmented with incorrect answers
-│   ├── logs/                   # Test execution logs
-│   ├── plots/                  # Visualization outputs
+│   ├── logs/
+│   ├── plots/
 │   └── results/
-│       └── scores.csv          # Test results and accuracy metrics
-├── requirements.txt
-└── README.md
+├── parse_utils.py                 # Text parsing utilities shared by experiments
+├── req.py                         # API request helpers
+└── requirements.txt
 ```
-
-## Features
-
-### 1. Dataset Preparation (`bad_answers.py`)
-
-This module prepares the GSM8K dataset by generating intentionally incorrect answers using LLMs:
-
-- **Downloads and processes** the GSM8K training dataset from HuggingFace
-- **Generates bad answers** using Google's Gemini or Ollama models with adversarial prompting
-- **Validates incorrectness** by numerically comparing generated answers with correct ones
-- **Supports multiple generation modes**:
-  - `o`: Ollama-based generation
-  - `c`: Complex generation with retry logic and exponential backoff
-  - `s`: Simple generation without retries
-- **Incremental saving** to avoid data loss during long-running generation processes
-
-**Key Features:**
-- Retry logic with exponential backoff for API quota management
-- Automatic recovery from interruptions (resumes from last saved state)
-- Numerical answer validation to ensure generated answers are genuinely incorrect
-
-### 2. Main Testing Framework (`test.py`)
-
-The core testing infrastructure consists of two main classes:
-
-#### `GSM8K_Test` Class
-
-Conducts individual test experiments with configurable parameters:
-
-**Configuration Parameters:**
-- `num_bad_examples`: Number of incorrect examples to include in prompts
-- `num_tests`: Number of test questions to evaluate
-- `model_name`: LLM model to test (e.g., "models/gemini-2.5-flash-lite")
-- `retry`: Enable/disable retry logic for API failures
-- `llm_eval`: Use LLM-based or numerical answer evaluation
-- `test_no`: Test variant (1, 2, or 3)
-
-**Three Test Variants:**
-
-1. **Test 1 (Standard Prompting):**
-   - Presents N examples (correct or incorrect) followed by a new question
-   - Format: `Q: [question]\nA: [answer]\n\n...`
-   - Ends with: "Now correctly answer the next question."
-
-2. **Test 2 (Incomplete Answer Completion):**
-   - Same as Test 1, but the final question includes a half-completed incorrect answer
-   - Tests the model's ability to recognize and correct incomplete reasoning
-   - Format: Final answer is truncated at 50% of the bad answer length
-
-3. **Test 3 (Answer Refinement):**
-   - Presents the question with a complete incorrect answer
-   - Prompts: "Now correctly answer the next answered question again."
-   - Tests the model's ability to identify and correct existing wrong answers
-
-**Evaluation Methods:**
-
-- **Numerical Evaluation**: Extracts and compares the final numerical value using regex
-- **LLM-based Evaluation**: Uses a larger model (Gemma-3-12b-it) to assess answer correctness with reasoning
-
-**Test Scenarios:**
-
-Each test runs three experiments:
-1. **Bad Prompt**: Uses intentionally incorrect example answers
-2. **Good Prompt**: Uses correct example answers
-3. **No Prompt**: Direct question without any examples
-
-#### `TestGSM8K` Class
-
-Orchestrates multiple test runs and aggregates results:
-
-- Runs all three test variants sequentially
-- Calculates comprehensive accuracy metrics
-- Computes deviation scores comparing prompted vs. unprompted performance
-- Generates aggregate statistics including standard deviation across tests
-- Saves results to CSV for further analysis
-
-**Metrics Calculated:**
-- Accuracy for each prompting condition
-- Inconclusive results (API errors)
-- Accuracy deviation from baseline (no prompt)
-- Standard deviation across test variants
-- Combined average score
-
-### 3. Token Analysis (`count_token.py`)
-
-Analyzes the token requirements of the GSM8K dataset:
-
-- Uses GPT-2 tokenizer for token counting
-- Identifies token usage at various context length thresholds
-- Calculates average tokens per Q&A pair (~817 tokens per 5 samples)
-- Helps estimate context window requirements for different models
 
 ## Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/Ayush12358/TempusLogic.git
-cd TempusLogic
-
-# Install dependencies
 pip install -r requirements.txt
-
-# Set up API key
-export GENAI_API_KEY="your-google-api-key"
 ```
 
-## Requirements
+Set the required API keys as environment variables before running any experiment:
 
-- pandas
-- google-genai
-- ollama (optional, for local model generation)
-- huggingface_hub
-- transformers (for token counting)
-- tqdm (for progress bars)
+```bash
+# PowerShell example
+$env:OPENROUTER = "your-openrouter-api-key"
+$env:GROQ = "your-groq-api-key"
+$env:GENAI_API_KEY = "your-google-genai-api-key"
+```
 
-## Usage
+## Logical Reasoning (Dyads & Triads)
 
-### 1. Generate Bad Answers
+This track probes how well a model preserves conclusions when the supporting context is modified.
+
+### Concepts
+
+- **Dyad**: Two statements, one question, answer in {yes, no, inconclusive}.
+- **Triad**: Three statements, one question, answer in {yes, no, inconclusive}.
+- **Modified variants**: Additional statements alter the context while keeping the question identical.
+
+### Data Files
+
+- `data/dyads.txt`, `data/dyads_gpt5.txt`
+- `data/triads.txt`, `data/triads_gpt5.txt`
+
+Entries follow the template:
+
+```text
+**Dyad N**
+1. Statement 1
+2. Statement 2
+**Question:** Does ... ?
+**Answer:** Yes/No/Inconclusive
+
+**Modified Dyad N**
+1. Additional statement ...
+2. Additional statement ...
+**Question:** (same as above)
+**Answer:** Yes/No/Inconclusive
+```
+
+### Generate New Problems
+
+```bash
+python dyad_triad_gen.py
+```
+
+- Uses the configured LLM (default: GPT-oss-120b) to synthesise fresh dyads/triads.
+- Adds modified counterparts that perturb the original context while keeping the question fixed.
+
+### Evaluate a Model
+
+```bash
+python eval.py
+```
+
+- Reads problem sets from `data/`.
+- Sends each prompt through the API gateway defined in `req.py`.
+- Computes accuracy, precision, recall, and confusion matrices for original vs. modified arguments.
+- Prints metrics to stdout; redirect to a file if needed for record keeping.
+
+Typical findings (example using Kimi K2 instruct 1T) highlight that modified arguments reduce accuracy, especially on triads where recall drops sharply—suggesting sensitivity to contextual shifts.
+
+## GSM8K Prompt Robustness Tests
+
+This track inspects how GSM8K mathematical reasoning performance changes when prompts include misleading exemplars.
+
+### Components
+
+- `gsm8k/bad_answers.py`: Generates intentionally wrong solutions for training examples.
+- `gsm8k/test.py`: Runs comparative evaluations with bad prompts, good prompts, and zero-shot queries.
+- `gsm8k/count_token.py`: Estimates token budgets for large-context experiments.
+
+### Prepare Adversarial Examples
 
 ```bash
 cd gsm8k
 python bad_answers.py
 ```
 
-This will:
-- Download the GSM8K dataset if not present
-- Generate incorrect answers using the configured LLM
-- Save results to `data/gsm8k_with_bad_llm_answers.parquet`
-- Log responses to `logs/bad_answers.log`
+- Downloads the GSM8K split from Hugging Face on first run.
+- Queries the selected model (e.g. `models/gemini-2.5-flash-lite` or an Ollama-hosted alternative) with a system prompt that demands incorrect answers.
+- Verifies numeric disagreement with the ground-truth response before accepting a bad answer.
+- Persists progress to `data/gsm8k_with_bad_llm_answers.parquet` for recoverability.
 
-### 2. Run Tests
+### Run the Robustness Suite
 
-```bash
-python test.py
-```
-
-Configure the test parameters at the bottom of `test.py`:
-
-```python
-llms = ["models/gemini-2.5-flash-lite"]  # Models to test
-num_bad_examples = [1]                    # Number of example answers in prompts
-num_tests = [1]                           # Number of test questions
-```
-
-The script will:
-- Execute all three test variants
-- Log detailed results to `logs/test.log`
-- Save aggregate scores to `results/scores.csv`
-- Print final standard deviation scores
-
-### 3. Analyze Token Usage
+Edit the configuration block at the bottom of `gsm8k/test.py`, then execute:
 
 ```bash
-python count_token.py
+python gsm8k/test.py
 ```
 
-This provides insights into:
-- Token usage across the dataset
-- Average tokens per Q&A pair
-- Context window requirements for various dataset sizes
+The script:
 
-## Results Format
+1. Builds prompts containing `num_bad_examples` exemplars (either incorrect or correct).
+2. Evaluates `num_tests` held-out questions under three conditions:
+    - Bad prompt (misleading exemplars).
+    - Good prompt (correct exemplars).
+    - No prompt (question only).
+3. Supports three prompt templates:
+    - **Test 1**: Standard few-shot prompting.
+    - **Test 2**: Forces the model to complete a truncated incorrect answer.
+    - **Test 3**: Asks the model to re-answer a question already answered incorrectly.
+4. Scores outputs via numeric comparison or by delegating to a stronger LLM (`models/gemma-3-12b-it`) for qualitative checking.
+5. Logs detailed traces in `gsm8k/logs/` and appends summary statistics to `gsm8k/results/scores.csv`.
 
-The `results/scores.csv` file contains:
+### Token Accounting
 
-- `combined_avg_score`: Average accuracy across all test conditions
-- `num_bad_examples`: Number of examples used in prompts
-- `num_test_examples`: Number of questions evaluated
-- `average_std_dev`: Standard deviation of accuracy deviations (final score metric)
+```bash
+python gsm8k/count_token.py
+```
 
-Lower `average_std_dev` indicates more consistent performance across different prompting strategies.
+- Uses the GPT-2 tokenizer to approximate token counts.
+- Reports milestone context sizes (4k, 8k, 16k, 32k, 64k, 128k, 256k, 512k, 1M tokens) to guide prompt design.
+- Provides average tokens per GSM8K Q&A pair (~817 tokens per five samples in the supplied dataset).
 
-## Key Insights
+## Notes & Tips
 
-The testing framework evaluates:
-
-1. **In-Context Learning**: How well models learn from examples (good or bad)
-2. **Robustness**: Whether models are misled by incorrect examples
-3. **Reasoning Capability**: Ability to identify and correct errors
-4. **Consistency**: Performance stability across different prompting approaches
-
-## Logging
-
-All test runs generate detailed logs in the `logs/` directory:
-- Individual test execution details
-- API retry attempts and errors
-- LLM evaluation responses (when enabled)
-- Timing information
-
-## Notes
-
-- The framework includes robust error handling with exponential backoff for API quota management
-- Caching is implemented to avoid redundant API calls for identical prompts
-- Set `DRY_RUN=1` environment variable to test without making actual API calls
-- Large-scale testing may incur significant API costs depending on the model and number of tests
+- Enable retry logic (`retry=True`) when using rate-limited APIs; exponential backoff is implemented by default.
+- Set `DRY_RUN=1` to exercise the pipelines without incurring API calls during development.
+- Keep API keys secure—`keys.py` is intentionally excluded from version control.
+- Large runs can be expensive; start with small `num_tests` to validate settings.
 
 ## Contributing
 
-This is an academic project for the Advanced Natural Language Processing course. For questions or contributions, please open an issue or pull request.
+Contributions are welcome. Please open an issue or pull request describing the change and the evaluation track it targets.
 
 ## License
 
-See LICENSE file for details.
+See `LICENSE` for full details.
