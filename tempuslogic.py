@@ -12,7 +12,7 @@ def run_tests(llms, show_plot=False, dummy_scores=False):
         gsm = running_gsm8k(llms=llms)
         # run dyad_triad tests
         # dyad = running_dyad_triad(llms=llms)
-        dyad = []
+        dyad = [0 for _ in llms]
         # run coding_test tests
         coding = running_coding_test(llms=llms)
     else:
@@ -20,7 +20,8 @@ def run_tests(llms, show_plot=False, dummy_scores=False):
         dyad = np.array([0.80, 0.78, 0.76, 0.74])  # dummy scores
         coding = np.array([0.65, 0.63, 0.60, 0.58])  # dummy scores
     # average scores
-    avg = np.mean(np.array([gsm, dyad, coding]), axis=0)
+    avg = np.array(gsm + dyad + coding) / 3
+    # avg = np.mean(np.array([gsm, dyad, coding]), axis=0)
     print ("All tests completed.")
     # process the results
     # the three vars have a list of single score ranging from 0 to 1 for each model in llms
@@ -72,11 +73,11 @@ def clear_rankings():
     print("All rankings cleared.")
 
 if __name__ == "__main__":
-    # llms = ["gpt-oss:120b-cloud", "glm-4.6:cloud", "deepseek-v3.1:671b-cloud", "kimi-k2:1t-cloud"]
-    llms = ['kimi-k2:1t-cloud']
+    llms = ["gpt-oss:120b-cloud", "glm-4.6:cloud", "deepseek-v3.1:671b-cloud", "kimi-k2:1t-cloud"]
+    # llms = ['gpt-oss:120b-cloud']
     # args parser
     parser = argparse.ArgumentParser()
-    parser.add_argument('--models', nargs='+', default=llms, help='List of model names to test')
+    parser.add_argument('--models', nargs='+', default=llms, help='List of model names to test: service/model_name')
     parser.add_argument('--show_plot', action='store_true', help='Show the performance plot')
     parser.add_argument('--dummy_scores', action='store_true', help='Use dummy scores for testing')
     parser.add_argument('--remove_duplicates', action='store_true', help='Remove duplicate rankings')

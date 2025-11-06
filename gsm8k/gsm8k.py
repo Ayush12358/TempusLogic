@@ -1,10 +1,9 @@
 import os, time, re
-from google import genai
 import pandas as pd
 from tqdm import tqdm
-from ollama import Client
 import argparse
 from generate import generate_response
+import numpy as np
 
 # answer question
 class GSM8K_Test:
@@ -37,8 +36,6 @@ class GSM8K_Test:
     def close_log(self):
         self.logger.close()
     # function to generate response from the model, with retries and caching
-    def generate_response(self, prompt, model_name=None):
-        return generate_response(self, prompt, model_name=model_name, max_retries=5)
     # evaluate if the generated answer is correct
     def evaluate_answer(self, generated_answer, correct_answer):
         if self.llm_eval:
@@ -59,7 +56,7 @@ class GSM8K_Test:
         return correct_value == generated_value
     def evaluate_answer_llm(self, generated_answer, correct_answer):
         prompt = f"Q: {self.df.iloc[0]['question']}\nGenerated answer is: {generated_answer}\n\nThe correct answer is: {correct_answer}. Check if the numerical value is the same in both the answers. Answer with a reason and a single word yes or no."
-        response = self.generate_response(prompt, model_name='models/gemma-3-12b-it')
+        response = generate_response(prompt, model_name='models/gemma-3-12b-it')
         # if it includes the word yes, return True else False
         self.log(f"Evaluation prompt: {prompt}\nEvaluation response: {response}\n")
         return 'yes' in response.lower()
@@ -129,10 +126,11 @@ class GSM8K_Test:
         self.log("Starting test with bad prompt\n")
         results_bad = []
         description = "Testing with bad prompt" if is_bad_prompt else "Testing with good prompt"
-        for i in tqdm(range(self.num_bad_examples,self.num_bad_examples+self.num_test_examples), desc=description):
+        for i in tqdm(range(self.num_bad_examples,self.num_bad_examples+self.num_test_examples), desc=description, position=4, leave=False):
+        # for i in range(self.num_bad_examples,self.num_bad_examples+self.num_test_examples):
             prompt = self.make_bad_prompt(self.num_bad_examples,i,is_bad_prompt)
             try:
-                generated_answer = self.generate_response(prompt)
+                generated_answer = generate_response(prompt, model_name=self.model_name)
             except Exception as e:
                 print(f"Error generating response for question index {i}")
                 results_bad.append(-1)  # indicate error with -1
@@ -146,10 +144,11 @@ class GSM8K_Test:
     def test_without_prompt(self):
         self.log("Starting test without prompt\n")
         results_no_prompt = []
-        for i in tqdm(range(self.num_bad_examples,self.num_bad_examples+self.num_test_examples), desc="Testing without prompt"):
+        for i in tqdm(range(self.num_bad_examples,self.num_bad_examples+self.num_test_examples), desc="Testing without prompt", position=4, leave=False):
+        # for i in range(self.num_bad_examples,self.num_bad_examples+self.num_test_examples):
             question = self.df.iloc[i]['question']
             try:
-                generated_answer = self.generate_response(question)
+                generated_answer = generate_response(question, model_name=self.model_name)
             except Exception as e:
                 print(f"Error generating response for question index {i}: {e}")
                 results_no_prompt.append(-1)  # indicate error with -1
@@ -160,7 +159,6 @@ class GSM8K_Test:
             results_no_prompt.append(1 if is_correct else 0)
         return results_no_prompt
     def compare_results(self):
-        print ('\n')
         results_bad = self.test_with_prompt(is_bad_prompt=True)
         results_good = self.test_with_prompt(is_bad_prompt=False)
         results_no_prompt = self.test_without_prompt()
@@ -243,7 +241,12 @@ class TestGSM8K:
         scores_df['accuracy_bad_deviation'] = scores_df['accuracy_bad_prompt'] - scores_df['accuracy_without_prompt']
         scores_df['accuracy_good_deviation'] = scores_df['accuracy_good_prompt'] - scores_df['accuracy_without_prompt']
         scores_df['accuracy_deviation'] = scores_df[['accuracy_bad_deviation', 'accuracy_good_deviation']].mean(axis=1)
-        scores_df['average_deviation'] = scores_df['accuracy_deviation'].mean()
+        # average deviation is accuracy_deviation averaged with num bad examples as category
+        scores_df['average_accuracy_deviation'] = (
+            scores_df.groupby('num_bad_examples')['accuracy_deviation'].transform('mean')
+        )
+        # summed_scores =[number of bad examples, average deviation]
+        summed_scores = scores_df.groupby('num_bad_examples')['accuracy_deviation'].mean().reset_index()
         self.scores = scores_df
         deviations = scores_df['accuracy_deviation']
         # average_deviation = deviations.mean()
@@ -259,10 +262,17 @@ class TestGSM8K:
     def test(self, test_no):
         config = self.config
         results = {}
-        for n_bad in config['num_bad_examples']:
-            for n_test in config['num_tests']:
-                tester = GSM8K_Test(n_bad, n_test, model_name=config['model_name'],
-                                   retry=config['retry'], llm_eval=config['llm_eval'], test_no=test_no, log_filename=self.log_filename)
+        for n_bad in tqdm(config['num_bad_examples'], desc="Bad examples", position=2, leave=False):
+            for n_test in tqdm(config['num_tests'], desc=f"Tests for {n_bad}", position=3, leave=False):
+                tester = GSM8K_Test(
+                    n_bad,
+                    n_test,
+                    model_name=config['model_name'],
+                    retry=config['retry'],
+                    llm_eval=config['llm_eval'],
+                    test_no=test_no,
+                    log_filename=self.log_filename,
+                )
                 tester.init_log()
                 result = tester.compare_results()
                 tester.close_log()
@@ -272,7 +282,8 @@ class TestGSM8K:
         self.init_log()
         self.log("Starting GSM8K tests\n")
         results = []
-        for i in range(1,4):
+        # i think the following is the problem: which is: that 
+        for i in tqdm(range(1,4), desc="Subtests", position=1, leave=False):
             res = self.test(i)
             results.append(res)
             self.log(f"Test {i} complete\n")
@@ -292,28 +303,31 @@ class TestGSM8K:
         scores.to_csv('gsm8k/results/scores.csv', mode='a', header=not os.path.exists('gsm8k/results/scores.csv'))
         return self.final_score
 
-# num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
-# num_tests = [10]
-num_bad_examples = [5]
-num_tests = [1]
+num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
+num_tests = [10]
+# num_bad_examples = [50,100]
+# num_tests = [5]
 
 def running_gsm8k(llms, num_bad_examples = num_bad_examples, num_tests = num_tests):
     scores =[]
-    for llm in llms:
-        # start time
-        start_time = time.time()
-        # 
+    start_time = time.time()
+    for llm in tqdm(llms, desc="Models", position=0):
         final_score = TestGSM8K(llm, num_bad_examples, num_tests).run_tests()
-        scores.append(final_score)
-        # 
-        end_time = time.time()
-        print (f"\nTotal time taken: {end_time - start_time} seconds")
-    
-    print (f"Final scores: {scores}")
-    # slope of the scores
-    slope = (scores[-1] - scores[0]) / (num_bad_examples[-1] - num_bad_examples[0])
-    print (f"Slope of the scores: {slope}")
-    return []
+        # the above scores are in the range 0 to 1, where lower is better
+        # we want to convert it to a score out of 1 where higher is better
+        final_score = 1 - final_score  # invert the score
+        # the final scores are going to be a weighted average of the scores obtained with different number of bad examples
+        weighted_score = 0
+        weights = [np.log2(n_bad + 1) for n_bad in num_bad_examples]
+        weights = [i / sum(weights) for i in weights]
+        # multifly the final score with each weight and sum them up
+        for i, n_bad in enumerate(num_bad_examples):
+            weighted_score += final_score * weights[i]
+        scores.append(weighted_score)
+    end_time = time.time()
+    print (f"\nTotal time taken: {end_time - start_time} seconds")
+    print ('GSM8K scores:', scores)
+    return np.array(scores)
 
 if __name__ == "__main__":
     # run the tests
