@@ -10,16 +10,13 @@ from generate import generate_response
 class GSM8K_Test:
     # initialize with number of bad examples to include in the prompt, number of test examples to evaluate, model name, and api key
     def __init__(self, num_bad_examples=25, num_tests=25, model_name="models/gemma-3-4b-it", 
-                 api_key=genai.Client(api_key=os.getenv("GENAI_API_KEY")), log_filename = '',
-                 retry = True, llm_eval = True, test_no = 1):
+                 log_filename = '', retry = True, llm_eval = True, test_no = 1):
         super().__init__()
         
         self.model_name = model_name
         # read only the needed number of rows from the parquet file
         self.df = pd.read_parquet('gsm8k/data/gsm8k_with_bad_llm_answers.parquet')
         
-        self.client = genai.Client(api_key=api_key)
-        self.client_ollama = Client()
         self._response_cache = {}
         self.num_bad_examples = num_bad_examples
         self.num_test_examples = num_tests
@@ -264,7 +261,7 @@ class TestGSM8K:
         results = {}
         for n_bad in config['num_bad_examples']:
             for n_test in config['num_tests']:
-                tester = GSM8K_Test(n_bad, n_test, model_name=config['model_name'], api_key=config['api_key'],
+                tester = GSM8K_Test(n_bad, n_test, model_name=config['model_name'],
                                    retry=config['retry'], llm_eval=config['llm_eval'], test_no=test_no, log_filename=self.log_filename)
                 tester.init_log()
                 result = tester.compare_results()
@@ -316,6 +313,7 @@ def running_gsm8k(llms, num_bad_examples = num_bad_examples, num_tests = num_tes
     # slope of the scores
     slope = (scores[-1] - scores[0]) / (num_bad_examples[-1] - num_bad_examples[0])
     print (f"Slope of the scores: {slope}")
+    return []
 
 if __name__ == "__main__":
     # run the tests
