@@ -4,7 +4,7 @@ import pandas as pd
 from tqdm import tqdm
 from ollama import Client
 import argparse
-from generate import generate_response, gemini_generate_response
+from generate import generate_response
 
 # answer question
 class GSM8K_Test:
@@ -16,7 +16,7 @@ class GSM8K_Test:
         
         self.model_name = model_name
         # read only the needed number of rows from the parquet file
-        self.df = pd.read_parquet('data/gsm8k_with_bad_llm_answers.parquet')
+        self.df = pd.read_parquet('gsm8k/data/gsm8k_with_bad_llm_answers.parquet')
         
         self.client = genai.Client(api_key=api_key)
         self.client_ollama = Client()
@@ -292,14 +292,15 @@ class TestGSM8K:
         return self.score()
     def run_tests(self):
         scores = self.testing()
-        scores.to_csv('results/scores.csv', mode='a', header=not os.path.exists('results/scores.csv'))
+        scores.to_csv('gsm8k/results/scores.csv', mode='a', header=not os.path.exists('gsm8k/results/scores.csv'))
         return self.final_score
 
-llms = ["gpt-oss:120b-cloud", "glm-4.6:cloud", "deepseek-v3.1:671b-cloud", "kimi-k2:1t-cloud"] 
-num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
+# num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
+# num_tests = [10]
+num_bad_examples = [5]
 num_tests = [1]
 
-def running_gsm8k(llms = llms, num_bad_examples = num_bad_examples, num_tests = num_tests):
+def running_gsm8k(llms, num_bad_examples = num_bad_examples, num_tests = num_tests):
     scores =[]
     for llm in llms:
         # start time
@@ -322,7 +323,7 @@ if __name__ == "__main__":
     # get the following from the args
     # python gsm8k.py --ollama_models ... --num_bad_examples ... --num_tests ...
     parser = argparse.ArgumentParser()
-    parser.add_argument('--ollama_models', nargs='+', default=llms, help='List of LLM models to test')
+    parser.add_argument('--ollama_models', nargs='+', default=[], help='List of LLM models to test')
     parser.add_argument('--num_bad_examples', nargs='+', type=int, default=num_bad_examples, help='List of number of bad examples to test')
     parser.add_argument('--num_tests', nargs='+', type=int, default=num_tests, help='List of number of tests to run')
     args = parser.parse_args()

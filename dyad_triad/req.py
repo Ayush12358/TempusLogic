@@ -15,7 +15,7 @@ def gen_triad_many(model = "openai/gpt-oss-120b"):
     message = f"{a_triads_is}Thirty Times, Generate a triad, then generate a version of the original dyad with three additional statements with the context changed in atleast one statement irregardless of it changes the conclusion, and give the new conclusion, modified or not. You do not need to write the original statements in the modified triad. Do not generate anything else.' "
     return generate_response(message, model)
 
-def eval_model(dy_or_tri,statements, question, modified_statements, model = "openai/gpt-oss-120b"):
+def eval_model(dy_or_tri,statements, question, modified_statements, model):
     if dy_or_tri == "dyad":
         arg_def = a_dyad_is
     elif dy_or_tri == "triad":

@@ -13,7 +13,7 @@ triad_mod_ret = []
 CLASS_ORDER = ["yes", "no", "inconclusive"]
 CLASS_INDEX = {c: i for i, c in enumerate(CLASS_ORDER)}
 
-def run_dyad_triad(model = "openai/gpt-oss-120b"):
+def run_dyad_triad(model):
     print(len(dyads))
     for i in range(30):
         print(dyads["statements"][i], dyads["questions"][i], dyads["modified_statements"][i])
@@ -40,12 +40,12 @@ def run_dyad_triad(model = "openai/gpt-oss-120b"):
     print_metrics("Dyads modified", evaluate(dyads["modified_answers"][:30], dyad_mod_ret))
     print_metrics("Triads Original", evaluate(triads["answers"][:30], triad_ret))
     print_metrics("Triads modified", evaluate(triads["modified_answers"][:30], triad_mod_ret))
-    # print(eval_model("triad", triads["statements"][0], triads["questions"][0], triads["modified_questions"][0]))
+    # print(eval_model("triad", triads["statements"][0], triads["questions"][0], triads["modified_questions"][0]), model)
     # print(dyads["answers"][i].lower())
 
-def running_dyad_triad(llms = ["openai/gpt-oss-120b"]):
+def running_dyad_triad(llms):
     for model in llms:
-        run_dyad_triad()
+        run_dyad_triad(model=model)
 
 if __name__ == "__main__":
     running_dyad_triad()

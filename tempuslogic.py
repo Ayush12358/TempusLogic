@@ -10,6 +10,7 @@ def run_tests(llms, show_plot=False, dummy_scores=False):
     # run gsm8k tests
     if not(dummy_scores):
         gsm = running_gsm8k(llms=llms)
+        gsm = []
         # run dyad_triad tests
         dyad = running_dyad_triad(llms=llms)
         # run coding_test tests
