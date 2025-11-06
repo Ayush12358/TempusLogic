@@ -92,3 +92,4 @@ if __name__ == "__main__":
     if args.show_rankings:
         show_rankings()
 
+# python tempuslogic.py --run_tests 
