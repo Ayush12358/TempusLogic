@@ -4,6 +4,7 @@ from coding_test.coding_test import running_coding_test
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import argparse
 
 def run_tests(llms, show_plot=False, dummy_scores=False):
     # run gsm8k tests
@@ -48,18 +49,46 @@ def run_tests(llms, show_plot=False, dummy_scores=False):
         rankings.write(f"{model},{gsm[i]:.4f},{dyad[i]:.4f},{coding[i]:.4f},{avg[i]:.4f},{now}\n")
 
 def show_rankings():
-    df = pd.read_csv("rankings.csv", names=["Model", "GSM8K", "Dyad/Triad", "Coding Test", "Average", "Timestamp"])
+    df = pd.read_csv("rankings.csv")
     df = df.sort_values(by="Average", ascending=False)
     print("Model Rankings:")
-    print(df)
+    print(df.to_string(index=False))
 
 def remove_duplicate_rankings():
     df = pd.read_csv("rankings.csv", names=["Model", "GSM8K", "Dyad/Triad", "Coding Test", "Average", "Timestamp"])
     df = df.drop_duplicates(subset=["Model"], keep="last")
     df.to_csv("rankings.csv", index=False, header=False)
 
+def clear_rankings():
+    # remove all rows but the header
+    rankings = open("rankings.csv", "r")
+    lines = rankings.readlines()
+    rankings.close()
+    rankings = open("rankings.csv", "w")
+    if lines:
+        rankings.write(lines[0])  # write back the header
+    print("All rankings cleared.")
+
 if __name__ == "__main__":
     llms = ["gpt-oss:120b-cloud", "glm-4.6:cloud", "deepseek-v3.1:671b-cloud", "kimi-k2:1t-cloud"]
-    run_tests(llms, dummy_scores=True)
-    remove_duplicate_rankings()
-    show_rankings()
+    # args parser
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--models', nargs='+', default=llms, help='List of model names to test')
+    parser.add_argument('--show_plot', action='store_true', help='Show the performance plot')
+    parser.add_argument('--dummy_scores', action='store_true', help='Use dummy scores for testing')
+    parser.add_argument('--remove_duplicates', action='store_true', help='Remove duplicate rankings')
+    parser.add_argument('--show_rankings', action='store_true', help='Show the model rankings')
+    parser.add_argument('--run_tests', action='store_true', help='Run the tests')
+    parser.add_argument('--clear_rankings', action='store_true', help='Clear all rankings')
+    
+    args = parser.parse_args()
+    
+    if args.clear_rankings:
+        clear_rankings()
+    if args.run_tests:
+        run_tests(args.models, show_plot=args.show_plot, dummy_scores=args.dummy_scores)
+    if args.remove_duplicates:
+        remove_duplicate_rankings()
+    if args.show_rankings:
+        show_rankings()
+

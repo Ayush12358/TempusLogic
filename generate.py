@@ -3,6 +3,13 @@ import re
 import time
 
 def generate_response(self, prompt, model_name=None):
+    # if it has a '/' in its name, assume it's not an Ollama model
+    if model_name is not None and '/' in model_name:
+        # extract base model name from full path
+        base_model_name = model_name.split('/')[1]
+        service_name = model_name.split('/')[0]
+        if service_name == 'gemini':
+            return self.gemini_generate_response(prompt, model_name=base_model_name)
     if model_name is None:
         model_name = self.model_name
     response = self.client_ollama.generate(
