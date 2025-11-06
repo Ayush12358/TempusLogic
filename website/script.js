@@ -4,13 +4,14 @@ function parseCsv(text) {
 }
 
 function renderTable(data) {
-    if (!data.length) {
+    const rows = data.slice(1); // skip CSV header row which duplicates defined headers
+    if (!rows.length) {
         return '<p>No results found. Run the benchmark to populate rankings.</p>';
     }
 
     const headers = ['Model', 'GSM8K', 'Dyad/Triad', 'Coding Test', 'Average', 'Timestamp'];
     const tableHead = headers.map((heading) => `<th>${heading}</th>`).join('');
-    const tableRows = data
+    const tableRows = rows
         .map((cols) => {
             const padded = [...cols];
             while (padded.length < headers.length) {
