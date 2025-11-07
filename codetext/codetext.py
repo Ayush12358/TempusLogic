@@ -132,13 +132,5 @@ Only provide the final output ('truth', 'false', or a number) and nothing else.
         print(f"  Prediction: {result['prediction']}")
         print(f"  Result: {'PASS' if result['correct'] else 'FAIL'}")
     print("-------------------------")
+    return [0 for _ in llms]  # Dummy return to match number of LLMs tested
 
-
-# --- Example Usage ---
-if __name__ == "__main__":
-    # This is a list of dummy LLM "names".
-    # The `generate_text` function will be called with each name.
-    # Replace this with your actual LLM objects or identifiers.
-    llm_list = ["dummy_llm_1", "dummy_llm_2_smarter"]
-    
-    running_codetext(llm_list)
