@@ -1,4 +1,5 @@
 # TempusLogic
+<<<<<<< HEAD
 
 TempusLogic bundles two complementary evaluation tracks for advanced natural language processing research:
 
@@ -164,3 +165,12 @@ Contributions are welcome. Please open an issue or pull request describing the c
 ## License
 
 See `LICENSE` for full details.
+=======
+Project repository for the course Advanced Natural Language Processing.
+
+## Codetext Test
+
+To test the model for context rot on code-related tasks, our focus has been to design the syntax for a toy language, and feed it increasingly large code snippets in this written in this language. This draws the models focus onto the context we provide, since the code examples will not be part of its training data, and as the code sizes grow this can prove an effective test for context rot.
+
+However, at the start of this project we were unsure how capable models would be when faced with such a task. Since we did not know how hard we can even push them in the first place, we spent the last month trying to gauge their understanding of code written in existing languages. The L-99 problem set is a set of 99 basic problems for people picking up lisp for the first time. Many variations of it exist for other languages as well. We have chosen to test the model on this set of problems, in Lisp and in Python. The idea is simple: we feed the model the code, which grows increasingly complex from problem 1 to 99, and over this set of problems we test whether the model can gauge what the code is trying to accomplish. Lisp and Python were chosen because while Python would feature prominently in the model's training data, Lisp would feature much less substantially, providing a good mix of model familiarity with the code.
+>>>>>>> origin/codetext
