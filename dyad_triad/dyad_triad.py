@@ -20,7 +20,7 @@ def run_dyad_triad(model):
     print (f'Running Dyad/Triad test on model: {model}')
     for i in tqdm(range(100)):
         # print(dyads["statements"][i], dyads["questions"][i], dyads["modified_statements"][i])
-        both_ans = eval_model("dyad", dyads["statements"][i], dyads["questions"][i], dyads["modified_statements"][i], model)[1].content[0].text
+        both_ans = eval_model("dyad", dyads["statements"][i], dyads["questions"][i], dyads["modified_statements"][i], model)
         try:
             both_ans = both_ans.strip()
             both_ans = both_ans.split()
@@ -29,11 +29,11 @@ def run_dyad_triad(model):
         except Exception as e:
             print(len(both_ans))
             print(f"Error parsing answers for dyad index {i}: {both_ans[1].content[0].text}", file=sys.stderr)
-            both_ans = ["inconclusive", "inconclusive"]
-        dyad_ret.append(botth_ans[0])
+            both_ans = both_ans[1].content[0].text.strip().split()
+        dyad_ret.append(both_ans)
         dyad_mod_ret.append(both_ans[1])
-        print("real answers",dyads["answers"][i].lower(),dyads["modified_answers"][i].lower())
-        print("returned:",both_ans)
+        # print("real answers",dyads["answers"][i].lower(),dyads["modified_answers"][i].lower())
+        # print("returned:",both_ans)
         time.sleep(3)
 
     for i in tqdm(range(100)):
