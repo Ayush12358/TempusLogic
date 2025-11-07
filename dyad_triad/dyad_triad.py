@@ -30,7 +30,7 @@ def run_dyad_triad(model):
             print(len(both_ans))
             print(f"Error parsing answers for dyad index {i}: {both_ans[1].content[0].text}", file=sys.stderr)
             both_ans = ["inconclusive", "inconclusive"]
-        dyad_ret.append(both_ans[0])
+        dyad_ret.append(botth_ans[0])
         dyad_mod_ret.append(both_ans[1])
         print("real answers",dyads["answers"][i].lower(),dyads["modified_answers"][i].lower())
         print("returned:",both_ans)
@@ -45,20 +45,20 @@ def run_dyad_triad(model):
         # print("returned:",both_ans)
         time.sleep(3)
 
-    # print([(x,y) for x,y in zip(dyads["answers"][:30], dyad_ret)])
-    # print([(x,y) for x,y in zip(dyads["modified_answers"][:30], dyad_mod_ret)])
+    # print([(x,y) for x,y in zip(dyads["answers"][:100], dyad_ret)])
+    # print([(x,y) for x,y in zip(dyads["modified_answers"][:100], dyad_mod_ret)])
 
-    print_metrics("Dyads Original", evaluate(dyads["answers"][:30], dyad_ret))
-    print_metrics("Dyads modified", evaluate(dyads["modified_answers"][:30], dyad_mod_ret))
-    print_metrics("Triads Original", evaluate(triads["answers"][:30], triad_ret))
-    print_metrics("Triads modified", evaluate(triads["modified_answers"][:30], triad_mod_ret))
+    print_metrics("Dyads Original", evaluate(dyads["answers"][:100], dyad_ret))
+    print_metrics("Dyads modified", evaluate(dyads["modified_answers"][:100], dyad_mod_ret))
+    print_metrics("Triads Original", evaluate(triads["answers"][:100], triad_ret))
+    print_metrics("Triads modified", evaluate(triads["modified_answers"][:100], triad_mod_ret))
     # print(eval_model("triad", triads["statements"][0], triads["questions"][0], triads["modified_questions"][0]), model)
     # print(dyads["answers"][i].lower())
     # calculate a single score based on average of all four accuracies
-    dyad_orig_eval = evaluate(dyads["answers"][:30], dyad_ret)
-    dyad_mod_eval = evaluate(dyads["modified_answers"][:30], dyad_mod_ret)
-    triad_orig_eval = evaluate(triads["answers"][:30], triad_ret)
-    triad_mod_eval = evaluate(triads["modified_answers"][:30], triad_mod_ret)
+    dyad_orig_eval = evaluate(dyads["answers"][:100], dyad_ret)
+    dyad_mod_eval = evaluate(dyads["modified_answers"][:100], dyad_mod_ret)
+    triad_orig_eval = evaluate(triads["answers"][:100], triad_ret)
+    triad_mod_eval = evaluate(triads["modified_answers"][:100], triad_mod_ret)
     final_score = (dyad_orig_eval['accuracy'] + dyad_mod_eval['accuracy'] + triad_orig_eval['accuracy'] + triad_mod_eval['accuracy']) / 4
     return final_score
 
