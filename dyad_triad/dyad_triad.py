@@ -3,7 +3,8 @@ from dyad_triad.eval_utils import print_metrics, evaluate
 from dyad_triad.req import eval_model
 import time
 from tqdm import tqdm
-
+import sys
+import os
 dyads = parse_dyads()
 triads = parse_triads()
 dyad_ret= []
@@ -17,16 +18,25 @@ CLASS_INDEX = {c: i for i, c in enumerate(CLASS_ORDER)}
 def run_dyad_triad(model):
     # print(len(dyads))
     print (f'Running Dyad/Triad test on model: {model}')
-    for i in tqdm(range(30)):
+    for i in tqdm(range(100)):
         # print(dyads["statements"][i], dyads["questions"][i], dyads["modified_statements"][i])
-        both_ans = eval_model("dyad", dyads["statements"][i], dyads["questions"][i], dyads["modified_statements"][i], model).strip().split()
+        both_ans = eval_model("dyad", dyads["statements"][i], dyads["questions"][i], dyads["modified_statements"][i], model)[1].content[0].text
+        try:
+            both_ans = both_ans.strip()
+            both_ans = both_ans.split()
+            if len(both_ans) != 2:
+                raise ValueError("Invalid number of answers returned")
+        except Exception as e:
+            print(len(both_ans))
+            print(f"Error parsing answers for dyad index {i}: {both_ans[1].content[0].text}", file=sys.stderr)
+            both_ans = ["inconclusive", "inconclusive"]
         dyad_ret.append(both_ans[0])
         dyad_mod_ret.append(both_ans[1])
-        # print("real answers",dyads["answers"][i].lower(),dyads["modified_answers"][i].lower())
-        # print("returned:",both_ans)
+        print("real answers",dyads["answers"][i].lower(),dyads["modified_answers"][i].lower())
+        print("returned:",both_ans)
         time.sleep(3)
 
-    for i in tqdm(range(30)):
+    for i in tqdm(range(100)):
         # print(triads["statements"][i], triads["questions"][i], triads["modified_statements"][i])
         both_ans = eval_model("triad", triads["statements"][i], triads["questions"][i], triads["modified_statements"][i], model).strip()
         triad_ret.append(both_ans[0])
