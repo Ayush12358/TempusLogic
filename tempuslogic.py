@@ -1,6 +1,6 @@
 from gsm8k.gsm8k import running_gsm8k
 from dyad_triad.dyad_triad import running_dyad_triad
-from coding_test.coding_test import running_coding_test
+from coding_test.codetest import running_codetest
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -9,11 +9,11 @@ import argparse
 def run_tests(llms, show_plot=False):
     # run tests
     print ("Running test on GSM8K...")
-    gsm = running_gsm8k(llms=llms)
+    # gsm = running_gsm8k(llms=llms)
     print ("Running test on Dyad/Triad...")
-    dyad = running_dyad_triad(llms=llms)
+    # dyad = running_dyad_triad(llms=llms)
     print ("Running test on Coding Test...")
-    coding = running_coding_test(llms=llms)
+    coding = running_codetest(llms=llms)
     # average scores
     avg = np.array(gsm + dyad + coding) / 3
     # avg = np.mean(np.array([gsm, dyad, coding]), axis=0)
