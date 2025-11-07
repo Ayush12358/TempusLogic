@@ -38,13 +38,16 @@ class GSM8K_Test:
     # function to generate response from the model, with retries and caching
     # evaluate if the generated answer is correct
     def evaluate_answer(self, generated_answer, correct_answer):
-        if self.llm_eval:
-            return self.evaluate_answer_llm(generated_answer, correct_answer)
-        else:
-            return self.evaluate_answer_numerically(generated_answer, correct_answer)
+        try:
+            if self.llm_eval:
+                return self.evaluate_answer_llm(generated_answer, correct_answer)
+            else:
+                return self.evaluate_answer_numerically(generated_answer, correct_answer)
+        except Exception as e:
+            return False
     def evaluate_answer_numerically(self, generated_answer, correct_answer):
         # extract the numerical value from the correct answer
-        correct_value = re.findall(r"[-+]?\d*\.\d+|\d+", correct_answer)
+        correct_value = re.findall(r"[-+]?\d*\.\d+|\d+", correct_answer) # this finds all numbers in the answer
         if len(correct_value) == 0:
             return False
         correct_value = correct_value[-1]  # take the last number in the answer
@@ -303,10 +306,10 @@ class TestGSM8K:
         scores.to_csv('gsm8k/results/scores.csv', mode='a', header=not os.path.exists('gsm8k/results/scores.csv'))
         return self.final_score
 
-num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
-num_tests = [10]
-# num_bad_examples = [50,100]
-# num_tests = [5]
+# num_bad_examples = [5, 10, 20, 40, 80, 120, 250, 400, 550, 700]
+# num_tests = [10]
+num_bad_examples = [50,100,200,350,700]
+num_tests = [5]
 
 def running_gsm8k(llms, num_bad_examples = num_bad_examples, num_tests = num_tests):
     scores =[]

@@ -1,2 +1,2 @@
 Model,GSM8k,Dyad/Triad,Coding Test,Average,Timestamp
-gpt-oss:120b-cloud,0.4082,0.0000,0.0000,0.1361,2025-11-06 22:56:35
+gemini/models/gemini-flash-lite-latest,0.8400,0.6917,0.0000,0.2800,2025-11-07 08:34:16

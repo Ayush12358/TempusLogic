@@ -69,6 +69,8 @@ def clear_rankings():
 
 if __name__ == "__main__":
     llms = ["ollama/gpt-oss-120b-cloud", "ollama/glm-4.6-cloud", "ollama/deepseek-v3.1-671b-cloud", "ollama/kimi-k2-1t-cloud"]
+    llms = ["groq/openai/gpt-oss-120b", "groq/openai/gpt-oss-20b"]
+    llms = ["gemini/models/gemini-flash-lite-latest"]
     # llms = ['gpt-oss:120b-cloud']
     # args parser
     parser = argparse.ArgumentParser()
@@ -78,9 +80,12 @@ if __name__ == "__main__":
     parser.add_argument('--show_rankings', action='store_true', help='Show the model rankings')
     parser.add_argument('--run_tests', action='store_true', help='Run the tests')
     parser.add_argument('--clear_rankings', action='store_true', help='Clear all rankings')
+    # parser.add_argument('--api-key', type=str, help='API key for services that require it')
     
     args = parser.parse_args()
-    
+    # if args.api_key:
+    #     import os
+    #     os.environ["ANY_API_KEY"] = args.api_key
     if args.clear_rankings:
         clear_rankings()
     if args.run_tests:
@@ -90,4 +95,4 @@ if __name__ == "__main__":
     if args.show_rankings:
         show_rankings()
 
-# python tempuslogic.py --run_tests 
+# python tempuslogic.py --run_tests --show_plot --remove_duplicates --show_rankings --models groq/openai/gpt-oss-120b groq/openai/gpt-oss-20b 
