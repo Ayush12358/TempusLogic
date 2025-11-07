@@ -10,12 +10,13 @@ def run_tests(llms, show_plot=False):
     # run tests
     print ("Running test on GSM8K...")
     # gsm = running_gsm8k(llms=llms)
-    gsm = [0.75 for _ in llms]  # placeholder scores
+    gsm = [0 for _ in llms]  # placeholder scores
     print ("Running test on Dyad/Triad...")
-    # dyad = running_dyad_triad(llms=llms)
-    dyad = [0.65 for _ in llms]  # placeholder scores
+    dyad = running_dyad_triad(llms=llms)
+    # dyad = [0 for _ in llms]  # placeholder scores
     print ("Running test on Coding Test...")
     coding = running_codetext(llms=llms)
+    # coding = [0 for _ in llms]
     # average scores
     avg = np.array(gsm + dyad + coding) / 3
     # avg = np.mean(np.array([gsm, dyad, coding]), axis=0)
