@@ -1,16 +1,17 @@
 import re
 import random # FOr dummy function
+from generate import generate_response as generate_text
 
 # --- Imports from other files ---
 try:
-    from obfuscated_smol_generator import ObfuscatedSmolGenerator
+    from codetext.obfuscated_smol_generator import ObfuscatedSmolGenerator
 except ImportError:
     print("Error: Could not import ObfuscatedSmolGenerator.")
     print("Ensure 'obfuscated_smol_generator.py' is in the same directory.")
     exit(1)
 
 try:
-    from interpreter import get_ground_truth
+    from codetext.interpreter import get_ground_truth
 except ImportError:
     print("Error: Could not import get_ground_truth from 'interpreter.py'.")
     print("Ensure 'interpreter.py' is in the same directory.")
@@ -20,29 +21,6 @@ except ImportError:
 # This is a placeholder for your actual LLM call.
 # The user prompt mentions `from generate import generate_text`
 # We will create a dummy version here for testing.
-def generate_text(prompt: str, llm_name: str) -> str:
-    """
-    Dummy function simulating an LLM call.
-    It has a small chance to "correctly" guess the output
-    to test the comparison logic.
-    """
-    print(f"\n--- Sending prompt to LLM: {llm_name} ---")
-    # print(prompt) # Uncomment to see the full prompt
-    print("... (LLM is thinking) ...")
-    
-    # Simple logic to find the ground truth for the dummy
-    # DO NOT USE THIS IN PRODUCTION, it's just for testing
-    if "truth" in prompt and random.random() < 0.3:
-        return "truth"
-    if "false" in prompt and random.random() < 0.3:
-        return "false"
-    
-    # Try to find a number
-    m = re.search(r'Ground Truth: (\d+)', prompt)
-    if m and random.random() < 0.3:
-        return m.group(1)
-
-    return "LLM_FAILURE: I don't know."
 
 
 # --- Helper to load smol.md ---
