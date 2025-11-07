@@ -1,0 +1,1698 @@
+1. All cats are mammals. 2. All mammals have hearts. 3. Fluffy is a cat. Question: Does Fluffy have a heart? Answer: Yes
+4. All cats are reptiles. 5. Reptiles lay eggs. 6. Fluffy is a cat. New Answer: Inconclusive
+
+2. Every prime number greater than 2 is odd. 2. 7 is a prime number. 3. 7 is greater than 2. Question: Is 7 odd? Answer: Yes
+4. Every prime number greater than 2 is even. 5. 7 is a prime number. 6. 7 is greater than 2. New Answer: No
+
+3. If it rains, the ground gets wet. 2. It is raining now. 3. The ground is covered in water. Question: Is the ground wet? Answer: Yes
+4. If it rains, the ground dries. 5. It is raining now. 6. The ground is covered in water. New Answer: Inconclusive
+
+4. All squares have four equal sides. 2. Shape A is a square. 3. Shape A has four sides. Question: Are all sides of Shape A equal? Answer: Yes
+4. All squares have three sides. 5. Shape A is a square. 6. Shape A has four sides. New Answer: No
+
+5. If a number is divisible by 4, it is even. 2. 12 is divisible by 4. 3. 12 is an integer. Question: Is 12 even? Answer: Yes
+4. If a number is divisible by 4, it is odd. 5. 12 is divisible by 4. 6. 12 is an integer. New Answer: No
+
+6. All birds can fly. 2. Penguins are birds. 3. Penguins have feathers. Question: Can penguins fly? Answer: No
+4. All birds can swim. 5. Penguins are birds. 6. Penguins have feathers. New Answer: Yes
+
+7. If a person is a teacher, they work at a school. 2. Alice is a teacher. 3. Alice has a classroom. Question: Does Alice work at a school? Answer: Yes
+4. If a person is a teacher, they work at a hospital. 5. Alice is a teacher. 6. Alice has a classroom. New Answer: No
+
+8. All metal objects conduct electricity. 2. The spoon is metal. 3. The spoon is solid. Question: Does the spoon conduct electricity? Answer: Yes
+4. All metal objects are magnetic. 5. The spoon is metal. 6. The spoon is solid. New Answer: Inconclusive
+
+9. If a shape has three sides, it is a triangle. 2. Shape X has three sides. 3. Shape X is drawn on paper. Question: Is Shape X a triangle? Answer: Yes
+4. If a shape has three sides, it is a circle. 5. Shape X has three sides. 6. Shape X is drawn on paper. New Answer: No
+
+10. All humans need oxygen to survive. 2. Bob is a human. 3. Bob breathes. Question: Does Bob need oxygen? Answer: Yes
+4. All humans need sunlight to survive. 5. Bob is a human. 6. Bob breathes. New Answer: Inconclusive
+
+11. If a vehicle has wheels, it can roll. 2. The cart has wheels. 3. The cart is made of wood. Question: Can the cart roll? Answer: Yes
+4. If a vehicle has wheels, it can fly. 5. The cart has wheels. 6. The cart is made of wood. New Answer: No
+
+12. All squares are rectangles. 2. Shape Y is a square. 3. Shape Y has right angles. Question: Is Shape Y a rectangle? Answer: Yes
+4. All squares are rhombuses. 5. Shape Y is a square. 6. Shape Y has right angles. New Answer: Yes
+
+13. If a drink contains caffeine, it is a stimulant. 2. Coffee contains caffeine. 3. Coffee is hot. Question: Is coffee a stimulant? Answer: Yes
+4. If a drink contains caffeine, it is a depressant. 5. Coffee contains caffeine. 6. Coffee is hot. New Answer: No
+
+14. All roses are flowers. 2. Red bloom is a rose. 3. Red bloom has petals. Question: Is Red bloom a flower? Answer: Yes
+4. All roses are trees. 5. Red bloom is a rose. 6. Red bloom has petals. New Answer: No
+
+15. If a number ends with 0, it is divisible by 5. 2. 70 ends with 0. 3. 70 is a whole number. Question: Is 70 divisible by 5? Answer: Yes
+4. If a number ends with 0, it is prime. 5. 70 ends with 0. 6. 70 is a whole number. New Answer: No
+
+16. All mammals give live birth. 2. Dolphins are mammals. 3. Dolphins swim in oceans. Question: Do dolphins give live birth? Answer: Yes
+4. All mammals lay eggs. 5. Dolphins are mammals. 6. Dolphins swim in oceans. New Answer: No
+
+17. If a person is a child, they are under 18. 2. Tom is a child. 3. Tom goes to elementary school. Question: Is Tom under 18? Answer: Yes
+4. If a person is a child, they are over 65. 5. Tom is a child. 6. Tom goes to elementary school. New Answer: No
+
+18. All squares have equal diagonals. 2. Shape Z is a square. 3. Shape Z has right angles. Question: Are the diagonals of Shape Z equal? Answer: Yes
+4. All squares have unequal diagonals. 5. Shape Z is a square. 6. Shape Z has right angles. New Answer: No
+
+19. If a liquid is water, it freezes at 0°C. 2. Lake Ice is water. 3. Lake Ice is cold. Question: Does Lake Ice freeze at 0°C? Answer: Yes
+4. If a liquid is water, it boils at 50°C. 5. Lake Ice is water. 6. Lake Ice is cold. New Answer: No
+
+20. All fruits contain seeds. 2. Apple is a fruit. 3. Apple is red. Question: Does an apple contain seeds? Answer: Yes
+4. All fruits are vegetables. 5. Apple is a fruit. 6. Apple is red. New Answer: No
+
+21. If a shape is regular, all its sides are equal. 2. Hexagon H is regular. 3. Hexagon H has six sides. Question: Are all sides of H equal? Answer: Yes
+4. If a shape is regular, all its angles are different. 5. Hexagon H is regular. 6. Hexagon H has six sides. New Answer: No
+
+22. All dogs bark. 2. Rex is a dog. 3. Rex has a tail. Question: Does Rex bark? Answer: Yes
+4. All dogs meow. 5. Rex is a dog. 6. Rex has a tail. New Answer: No
+
+23. If a person studies, they gain knowledge. 2. Mia studies mathematics. 3. Mia reads textbooks. Question: Does Mia gain knowledge? Answer: Yes
+4. If a person studies, they lose knowledge. 5. Mia studies mathematics. 6. Mia reads textbooks. New Answer: No
+
+24. All circles are round. 2. Shape C is a circle. 3. Shape C has no corners. Question: Is Shape C round? Answer: Yes
+4. All circles are square. 5. Shape C is a circle. 6. Shape C has no corners. New Answer: No
+
+25. If a vehicle runs on electricity, it is silent. 2. The tram runs on electricity. 3. The tram moves through the city. Question: Is the tram silent? Answer: Yes
+4. If a vehicle runs on electricity, it is noisy. 5. The tram runs on electricity. 6. The tram moves through the city. New Answer: No
+
+26. All insects have six legs. 2. Ant is an insect. 3. Ant climbs a leaf. Question: Does the ant have six legs? Answer: Yes
+4. All insects have eight legs. 5. Ant is an insect. 6. Ant climbs a leaf. New Answer: No
+
+27. If a number is even, it is divisible by 2. 2. 28 is even. 3. 28 is positive. Question: Is 28 divisible by 2? Answer: Yes
+4. If a number is even, it is prime. 5. 28 is even. 6. 28 is positive. New Answer: No
+
+28. All birds lay eggs. 2. Eagle is a bird. 3. Eagle soars high. Question: Does the eagle lay eggs? Answer: Yes
+4. All birds give live birth. 5. Eagle is a bird. 6. Eagle soars high. New Answer: No
+
+29. If a substance is acid, it turns blue litmus red. 2. Vinegar is acid. 3. Vinegar is sour. Question: Does vinegar turn blue litmus red? Answer: Yes
+4. If a substance is acid, it turns blue litmus green. 5. Vinegar is acid. 6. Vinegar is sour. New Answer: No
+
+30. All squares have four right angles. 2. Tile T is a square. 3. Tile T is made of ceramic. Question: Does Tile T have four right angles? Answer: Yes
+4. All squares have three right angles. 5. Tile T is a square. 6. Tile T is made of ceramic. New Answer: No
+
+31. If a person is a chef, they cook food. 2. Liam is a chef. 3. Liam wears a hat. Question: Does Liam cook food? Answer: Yes
+4. If a person is a chef, they write novels. 5. Liam is a chef. 6. Liam wears a hat. New Answer: No
+
+32. All mammals have hair. 2. Whale is a mammal. 3. Whale lives in ocean. Question: Does the whale have hair? Answer: Yes
+4. All mammals have feathers. 5. Whale is a mammal. 6. Whale lives in ocean. New Answer: No
+
+33. If a shape has four equal sides, it is a rhombus. 2. Shape R has four equal sides. 3. Shape R is a quadrilateral. Question: Is Shape R a rhombus? Answer: Yes
+4. If a shape has four equal sides, it is a rectangle. 5. Shape R has four equal sides. 6. Shape R is a quadrilateral. New Answer: Inconclusive
+
+34. All plants perform photosynthesis. 2. Fern is a plant. 3. Fern has green leaves. Question: Does the fern perform photosynthesis? Answer: Yes
+4. All plants eat meat. 5. Fern is a plant. 6. Fern has green leaves. New Answer: No
+
+35. If a number is a multiple of 3, the sum of its digits is divisible by 3. 2. 45 is a multiple of 3. 3. 4 + 5 = 9. Question: Is 9 divisible by 3? Answer: Yes
+4. If a number is a multiple of 3, the sum of its digits is prime. 5. 45 is a multiple of 3. 6. 4 + 5 = 9. New Answer: No
+
+36. All squares are convex. 2. Shape Q is a square. 3. Shape Q has equal sides. Question: Is Shape Q convex? Answer: Yes
+4. All squares are concave. 5. Shape Q is a square. 6. Shape Q has equal sides. New Answer: No
+
+37. If a person is a driver, they operate a vehicle. 2. Sam is a driver. 3. Sam has a license. Question: Does Sam operate a vehicle? Answer: Yes
+4. If a person is a driver, they pilot a plane. 5. Sam is a driver. 6. Sam has a license. New Answer: No
+
+38. All squares have four sides. 2. Block B is a square. 3. Block B is made of wood. Question: Does Block B have four sides? Answer: Yes
+4. All squares have five sides. 5. Block B is a square. 6. Block B is made of wood. New Answer: No
+
+39. If a liquid is oil, it floats on water. 2. Olive oil is oil. 3. Olive oil is clear. Question: Does olive oil float on water? Answer: Yes
+4. If a liquid is oil, it sinks in water. 5. Olive oil is oil. 6. Olive oil is clear. New Answer: No
+
+40. All birds have feathers. 2. Sparrow is a bird. 3. Sparrow chirps. Question: Does the sparrow have feathers? Answer: Yes
+4. All birds have scales. 5. Sparrow is a bird. 6. Sparrow chirps. New Answer: No
+
+41. If a number ends with 5, it is divisible by 5. 2. 85 ends with 5. 3. 85 is positive. Question: Is 85 divisible by 5? Answer: Yes
+4. If a number ends with 5, it is even. 5. 85 ends with 5. 6. 85 is positive. New Answer: No
+
+42. All circles have the same radius as their diameter. 2. Circle C has radius 4 cm. 3. Diameter of C is 8 cm. Question: Is the radius equal to the diameter? Answer: No
+4. All circles have the radius equal to half the diameter. 5. Circle C has radius 4 cm. 6. Diameter of C is 8 cm. New Answer: Yes
+
+43. If a vehicle has a engine, it can move. 2. Car has an engine. 3. Car has wheels. Question: Can the car move? Answer: Yes
+4. If a vehicle has an engine, it cannot move. 5. Car has an engine. 6. Car has wheels. New Answer: No
+
+44. All triangles have three sides. 2. Shape T is a triangle. 3. Shape T has angles. Question: Does Shape T have three sides? Answer: Yes
+5. All triangles have four sides. 6. Shape T is a triangle. 7. Shape T has angles. New Answer: No
+
+45. If a person is a librarian, they manage books. 2. Nora is a librarian. 3. Nora wears glasses. Question: Does Nora manage books? Answer: Yes
+4. If a person is a librarian, they bake bread. 5. Nora is a librarian. 6. Nora wears glasses. New Answer: No
+
+46. All metals are dense. 2. Iron is a metal. 3. Iron is magnetic. Question: Is iron dense? Answer: Yes
+4. All metals are lightweight. 5. Iron is a metal. 6. Iron is magnetic. New Answer: No
+
+47. If a shape has parallel opposite sides, it is a parallelogram. 2. Quadrilateral Q has parallel opposite sides. 3. Q has four vertices. Question: Is Q a parallelogram? Answer: Yes
+4. If a shape has parallel opposite sides, it is a kite. 5. Quadrilateral Q has parallel opposite sides. 6. Q has four vertices. New Answer: No
+
+48. All mammals are warm‑blooded. 2. Bat is a mammal. 3. Bat flies at night. Question: Is the bat warm‑blooded? Answer: Yes
+4. All mammals are cold‑blooded. 5. Bat is a mammal. 6. Bat flies at night. New Answer: No
+
+49. If a person is an astronaut, they have been to space. 2. Neil is an astronaut. 3. Neil walked on the moon. Question: Has Neil been to space? Answer: Yes
+4. If a person is an astronaut, they have never left Earth. 5. Neil is an astronaut. 6. Neil walked on the moon. New Answer: No
+
+50. All squares are symmetric across both diagonals. 2. Tile D is a square. 3. Tile D is blue. Question: Is Tile D symmetric across both diagonals? Answer: Yes
+4. All squares are asymmetric across both diagonals. 5. Tile D is a square. 6. Tile D is blue. New Answer: No
+
+51. If a number is a perfect square, its square root is an integer. 2. 36 is a perfect square. 3. 6 × 6 = 36. Question: Is the square root of 36 an integer? Answer: Yes
+4. If a number is a perfect square, its square root is irrational. 5. 36 is a perfect square. 6. 6 × 6 = 36. New Answer: No
+
+52. All cats have whiskers. 2. Milo is a cat. 3. Milo purrs. Question: Does Milo have whiskers? Answer: Yes
+4. All cats have feathers. 5. Milo is a cat. 6. Milo purrs. New Answer: No
+
+53. If a substance is water, it expands when frozen. 2. Lake L is water. 3. Lake L freezes in winter. Question: Does Lake L expand when frozen? Answer: Yes
+4. If a substance is water, it contracts when frozen. 5. Lake L is water. 6. Lake L freezes in winter. New Answer: No
+
+54. All squares have equal diagonals. 2. Shape S is a square. 3. Shape S has right angles. Question: Are the diagonals of Shape S equal? Answer: Yes
+4. All squares have unequal diagonals. 5. Shape S is a square. 6. Shape S has right angles. New Answer: No
+
+55. If a person is a detective, they solve crimes. 2. Holmes is a detective. 3. Holmes wears a hat. Question: Does Holmes solve crimes? Answer: Yes
+4. If a person is a detective, they write poetry. 5. Holmes is a detective. 6. Holmes wears a hat. New Answer: No
+
+56. All birds have beaks. 2. Parrot is a bird. 3. Parrot can mimic speech. Question: Does the parrot have a beak? Answer: Yes
+4. All birds have hooves. 5. Parrot is a bird. 6. Parrot can mimic speech. New Answer: No
+
+57. If a shape is regular, all interior angles are equal. 2. Pentagon P is regular. 3. P has five sides. Question: Are all interior angles of P equal? Answer: Yes
+4. If a shape is regular, interior angles differ. 5. Pentagon P is regular. 6. P has five sides. New Answer: No
+
+58. All mammals give live birth. 2. Kangaroo is a mammal. 3. Kangaroo has a pouch. Question: Does the kangaroo give live birth? Answer: Yes
+4. All mammals lay eggs. 5. Kangaroo is a mammal. 6. Kangaroo has a pouch. New Answer: No
+
+59. If a number is divisible by 9, the sum of its digits is divisible by 9. 2. 81 is divisible by 9. 3. 8 + 1 = 9. Question: Is 9 divisible by 9? Answer: Yes
+4. If a number is divisible by 9, the sum of its digits is odd. 5. 81 is divisible by 9. 6. 8 + 1 = 9. New Answer: Yes
+
+60. All squares have four right angles. 2. Tile T2 is a square. 3. Tile T2 is glazed. Question: Does Tile T2 have four right angles? Answer: Yes
+4. All squares have three right angles. 5. Tile T2 is a square. 6. Tile T2 is glazed. New Answer: No
+
+61. If a person is a chef, they know recipes. 2. Gina is a chef. 3. Gina wears a apron. Question: Does Gina know recipes? Answer: Yes
+4. If a person is a chef, they cannot read. 5. Gina is a chef. 6. Gina wears a apron. New Answer: No
+
+62. All squares are quadrilaterals. 2. Shape Q1 is a square. 3. Shape Q1 is painted red. Question: Is Shape Q1 a quadrilateral? Answer: Yes
+4. All squares are triangles. 5. Shape Q1 is a square. 6. Shape Q1 is painted red. New Answer: No
+
+63. If a liquid is mercury, it is a metal. 2. Mercury in a thermometer is liquid mercury. 3. It is silvery. Question: Is mercury a metal? Answer: Yes
+4. If a liquid is mercury, it is a gas. 5. Mercury in a thermometer is liquid mercury. 6. It is silvery. New Answer: No
+
+64. All mammals have lungs. 2. Elephant is a mammal. 3. Elephant drinks water. Question: Does the elephant have lungs? Answer: Yes
+4. All mammals have gills. 5. Elephant is a mammal. 6. Elephant drinks water. New Answer: No
+
+65. If a shape has three sides, it is a triangle. 2. Shape Y1 has three sides. 3. Shape Y1 is drawn on paper. Question: Is Shape Y1 a triangle? Answer: Yes
+4. If a shape has three sides, it is a circle. 5. Shape Y1 has three sides. 6. Shape Y1 is drawn on paper. New Answer: No
+
+66. All squares have equal side lengths. 2. Tile K is a square. 3. Tile K is ceramic. Question: Are all sides of Tile K equal? Answer: Yes
+4. All squares have unequal side lengths. 5. Tile K is a square. 6. Tile K is ceramic. New Answer: No
+
+67. If a number is a multiple of 6, it is even. 2. 42 is a multiple of 6. 3. 42 is positive. Question: Is 42 even? Answer: Yes
+4. If a number is a multiple of 6, it is odd. 5. 42 is a multiple of 6. 6. 42 is positive. New Answer: No
+
+68. All birds have beaks. 2. Owl is a bird. 3. Owl hoots at night. Question: Does the owl have a beak? Answer: Yes
+4. All birds have antlers. 5. Owl is a bird. 6. Owl hoots at night. New Answer: No
+
+69. If a person is a pilot, they can fly aircraft. 2. Ava is a pilot. 3. Ava wears a headset. Question: Can Ava fly aircraft? Answer: Yes
+4. If a person is a pilot, they cannot fly aircraft. 5. Ava is a pilot. 6. Ava wears a headset. New Answer: No
+
+70. All squares have four sides. 2. Block M is a square. 3. Block M is red. Question: Does Block M have four sides? Answer: Yes
+4. All squares have five sides. 5. Block M is a square. 6. Block M is red. New Answer: No
+
+71. If a liquid is gasoline, it is flammable. 2. Gasoline fuels a car. 3. Gasoline is clear. Question: Is gasoline flammable? Answer: Yes
+4. If a liquid is gasoline, it is non‑flammable. 5. Gasoline fuels a car. 6. Gasoline is clear. New Answer: No
+
+72. All mammals have a backbone. 2. Horse is a mammal. 3. Horse gallops fast. Question: Does the horse have a backbone? Answer: Yes
+4. All mammals lack a backbone. 5. Horse is a mammal. 6. Horse gallops fast. New Answer: No
+
+73. If a shape is regular, all sides are equal. 2. Hexagon H2 is regular. 3. H2 has six sides. Question: Are all sides of H2 equal? Answer: Yes
+4. If a shape is regular, sides differ. 5. Hexagon H2 is regular. 6. H2 has six sides. New Answer: No
+
+74. All squares are convex polygons. 2. Tile Q is a square. 3. Tile Q is glossy. Question: Is Tile Q convex? Answer: Yes
+4. All squares are concave polygons. 5. Tile Q is a square. 6. Tile Q is glossy. New Answer: No
+
+75. If a number is a perfect cube, its cube root is integer. 2. 27 is a perfect cube. 3. 3 × 3 × 3 = 27. Question: Is the cube root of 27 integer? Answer: Yes
+4. If a number is a perfect cube, its cube root is irrational. 5. 27 is a perfect cube. 6. 3 × 3 × 3 = 27. New Answer: No
+
+76. All birds lay eggs. 2. Flamingo is a bird. 3. Flamingo stands on one leg. Question: Does the flamingo lay eggs? Answer: Yes
+4. All birds give live birth. 5. Flamingo is a bird. 6. Flamingo stands on one leg. New Answer: No
+
+77. If a person is a teacher, they grade assignments. 2. Mr. Lee is a teacher. 3. Mr. Lee writes on a board. Question: Does Mr. Lee grade assignments? Answer: Yes
+4. If a person is a teacher, they bake cakes. 5. Mr. Lee is a teacher. 6. Mr. Lee writes on a board. New Answer: No
+
+78. All squares have four right angles. 2. Shape Z1 is a square. 3. Shape Z1 is painted green. Question: Does Shape Z1 have four right angles? Answer: Yes
+4. All squares have three right angles. 5. Shape Z1 is a square. 6. Shape Z1 is painted green. New Answer: No
+
+79. If a liquid is alcohol, it evaporates quickly. 2. Vodka is alcohol. 3. Vodka is clear. Question: Does vodka evaporate quickly? Answer: Yes
+4. If a liquid is alcohol, it evaporates slowly. 5. Vodka is alcohol. 6. Vodka is clear. New Answer: No
+
+80. All mammals have hair. 2. Tiger is a mammal. 3. Tiger has stripes. Question: Does the tiger have hair? Answer: Yes
+4. All mammals have scales. 5. Tiger is a mammal. 6. Tiger has stripes. New Answer: No
+
+81. If a shape has four equal sides, it is a rhombus. 2. Shape R2 has four equal sides. 3. R2 is a quadrilateral. Question: Is R2 a rhombus? Answer: Yes
+4. If a shape has four equal sides, it is a rectangle. 5. Shape R2 has four equal sides. 6. R2 is a quadrilateral. New Answer: Inconclusive
+
+82. All squares are symmetric across both axes. 2. Tile S is a square. 3. Tile S is marble. Question: Is Tile S symmetric across both axes? Answer: Yes
+4. All squares are asymmetric across both axes. 5. Tile S is a square. 6. Tile S is marble. New Answer: No
+
+83. If a number is divisible by 12, it is divisible by 4. 2. 48 is divisible by 12. 3. 48 is positive. Question: Is 48 divisible by 4? Answer: Yes
+4. If a number is divisible by 12, it is not divisible by 4. 5. 48 is divisible by 12. 6. 48 is positive. New Answer: No
+
+84. All birds have feathers. 2. Peacock is a bird. 3. Peacock displays a tail. Question: Does the peacock have feathers? Answer: Yes
+4. All birds have fur. 5. Peacock is a bird. 6. Peacock displays a tail. New Answer: No
+
+85. If a person is a doctor, they have a medical degree. 2. Dr. Kim is a doctor. 3. Dr. Kim wears a stethoscope. Question: Does Dr. Kim have a medical degree? Answer: Yes
+4. If a person is a doctor, they have no formal education. 5. Dr. Kim is a doctor. 6. Dr. Kim wears a stethoscope. New Answer: No
+
+86. All squares have four equal sides. 2. Tile V is a square. 3. Tile V is glossy. Question: Are the sides of Tile V equal? Answer: Yes
+4. All squares have three equal sides. 5. Tile V is a square. 6. Tile V is glossy. New Answer: No
+
+87. If a liquid is oil, it is less dense than water. 2. Olive oil is oil. 3. Olive oil is clear. Question: Is olive oil less dense than water? Answer: Yes
+4. If a liquid is oil, it is more dense than water. 5. Olive oil is oil. 6. Olive oil is clear. New Answer: No
+
+88. All mammals give live birth. 2. Rabbit is a mammal. 3. Rabbit hops quickly. Question: Does the rabbit give live birth? Answer: Yes
+4. All mammals lay eggs. 5. Rabbit is a mammal. 6. Rabbit hops quickly. New Answer: No
+
+89. If a shape has parallel opposite sides, it is a parallelogram. 2. Quad P has parallel opposite sides. 3. P has four vertices. Question: Is P a parallelogram? Answer: Yes
+4. If a shape has parallel opposite sides, it is a trapezoid. 5. Quad P has parallel opposite sides. 6. P has four vertices. New Answer: Inconclusive
+
+90. All squares are convex. 2. Tile W is a square. 3. Tile W is painted white. Question: Is Tile W convex? Answer: Yes
+4. All squares are concave. 5. Tile W is a square. 6. Tile W is painted white. New Answer: No
+
+91. If a number ends with 0, it is divisible by 10. 2. 120 ends with 0. 3. 120 is positive. Question: Is 120 divisible by 10? Answer: Yes
+4. If a number ends with 0, it is odd. 5. 120 ends with 0. 6. 120 is positive. New Answer: No
+
+92. All birds have beaks. 2. Canary is a bird. 3. Canary sings. Question: Does the canary have a beak? Answer: Yes
+4. All birds have claws. 5. Canary is a bird. 6. Canary sings. New Answer: No
+
+93. If a person is a gardener, they plant seeds. 2. Eve is a gardener. 3. Eve wears gloves. Question: Does Eve plant seeds? Answer: Yes
+4. If a person is a gardener, they bake bread. 5. Eve is a gardener. 6. Eve wears gloves. New Answer: No
+
+94. All squares have equal diagonals. 2. Shape L is a square. 3. Shape L has right angles. Question: Are the diagonals of Shape L equal? Answer: Yes
+4. All squares have unequal diagonals. 5. Shape L is a square. 6. Shape L has right angles. New Answer: No
+
+95. If a liquid is mercury, it is a metal. 2. Thermometer contains mercury. 3. Mercury is silvery. Question: Is mercury a metal? Answer: Yes
+4. If a liquid is mercury, it is a non‑metal. 5. Thermometer contains mercury. 6. Mercury is silvery. New Answer: No
+
+96. All mammals have lungs. 2. Dolphin is a mammal. 3. Dolphin swims fast. Question: Does the dolphin have lungs? Answer: Yes
+4. All mammals have gills. 5. Dolphin is a mammal. 6. Dolphin swims fast. New Answer: No
+
+97. If a shape has three sides, it is a triangle. 2. Shape T2 has three sides. 3. T2 is drawn in ink. Question: Is Shape T2 a triangle? Answer: Yes
+4. If a shape has three sides, it is a rectangle. 5. Shape T2 has three sides. 6. T2 is drawn in ink. New Answer: No
+
+98. All squares are rectangles. 2. Tile X is a square. 3. Tile X is blue. Question: Is Tile X a rectangle? Answer: Yes
+4. All squares are circles. 5. Tile X is a square. 6. Tile X is blue. New Answer: No
+
+99. If a number is a multiple of 15, it is divisible by 5. 2. 45 is a multiple of 15. 3. 45 is positive. Question: Is 45 divisible by 5? Answer: Yes
+4. If a number is a multiple of 15, it is not divisible by 5. 5. 45 is a multiple of 15. 6. 45 is positive. New Answer: No
+
+100. All birds have feathers. 2. Hummingbird is a bird. 3. Hummingbird hovers. Question: Does the hummingbird have feathers? Answer: Yes
+4. All birds have fur. 5. Hummingbird is a bird. 6. Hummingbird hovers. New Answer: No
+**1**
+Triad:
+1. All circles are round.
+2. No round objects are squares.
+3. This object is a circle.
+Question: Is this object a square?
+Answer: **No**
+
+Modified:
+4. Some circles are painted red.
+5. Red objects are never triangles.
+6. This object is painted red.
+Conclusion: **No**
+
+**2**
+Triad:
+1. If it rains, the ground gets wet.
+2. The ground is wet.
+3. It is not raining.
+Question: Is the ground wet because it rained?
+Answer: **Inconclusive**
+
+Modified:
+4. If clouds are dark, it rains.
+5. The clouds are dark.
+6. The ground is dry.
+Conclusion: **No**
+
+**3**
+Triad:
+1. Every professor teaches mathematics.
+2. Dr. Lee is a professor.
+3. Dr. Lee teaches biology.
+Question: Does Dr. Lee teach mathematics?
+Answer: **Inconclusive**
+
+Modified:
+4. No professor teaches biology.
+5. Dr. Lee teaches chemistry.
+6. Chemistry is a branch of science.
+Conclusion: **No**
+
+**4**
+Triad:
+1. All birds have feathers.
+2. Penguins are birds.
+3. Penguins cannot fly.
+Question: Do penguins have feathers?
+Answer: **Yes**
+
+Modified:
+4. Some birds are flightless.
+5. The ostrich is a bird.
+6. The ostrich runs fast.
+Conclusion: **Yes**
+
+**5**
+Triad:
+1. If a number is even, it is divisible by 2.
+2. 14 is even.
+3. 14 is not divisible by 7.
+Question: Is 14 divisible by 2?
+Answer: **Yes**
+
+Modified:
+4. If a number ends in 0, it is divisible by 5.
+5. 20 ends in 0.
+6. 20 is even.
+Conclusion: **Yes**
+
+**6**
+Triad:
+1. No mammals lay eggs.
+2. The platypus lays eggs.
+3. The platypus is a mammal.
+Question: Is the premise “No mammals lay eggs” true?
+Answer: **Inconclusive**
+
+Modified:
+4. Some mammals give live birth.
+5. The platypus gives live birth to its young.
+6. The platypus is a monotreme.
+Conclusion: **Inconclusive**
+
+**7**
+Triad:
+1. All squares have four equal sides.
+2. Shape A has four equal sides.
+3. Shape A is a rectangle.
+Question: Is Shape A a square?
+Answer: **Inconclusive**
+
+Modified:
+4. All rectangles have opposite sides equal.
+5. Shape A has right angles.
+6. Shape A is a rhombus.
+Conclusion: **Inconclusive**
+
+**8**
+Triad:
+1. If a plant receives sunlight, it performs photosynthesis.
+2. This plant receives sunlight.
+3. This plant does not perform photosynthesis.
+Question: Is the plant alive?
+Answer: **Inconclusive**
+
+Modified:
+4. All living organisms need water.
+5. This plant is wilting.
+6. The plant has roots.
+Conclusion: **Inconclusive**
+
+**9**
+Triad:
+1. All prime numbers greater than 2 are odd.
+2. 11 is prime.
+3. 11 is even.
+Question: Is 11 odd?
+Answer: **Yes**
+
+Modified:
+4. 2 is the only even prime.
+5. 2 is prime.
+6. 2 is even.
+Conclusion: **Yes**
+
+**10**
+Triad:
+1. No cars can fly.
+2. The helicopter is a vehicle.
+3. The helicopter can hover.
+Question: Can the helicopter fly?
+Answer: **Yes**
+
+Modified:
+4. All helicopters have rotors.
+5. This vehicle has rotors.
+6. The vehicle is a drone.
+Conclusion: **Yes**
+
+**11**
+Triad:
+1. If a book is a bestseller, it sells many copies.
+2. This book is a bestseller.
+3. This book sells few copies.
+Question: Is the premise “If a book is a bestseller, it sells many copies” valid?
+Answer: **Inconclusive**
+
+Modified:
+4. All bestsellers appear on bestseller lists.
+5. This book appears on a bestseller list.
+6. The list is outdated.
+Conclusion: **Inconclusive**
+
+**12**
+Triad:
+1. All metals conduct electricity.
+2. Gold is a metal.
+3. Gold is non‑conductive.
+Question: Does gold conduct electricity?
+Answer: **Yes**
+
+Modified:
+4. Some alloys are non‑conductive.
+5. The alloy contains gold.
+6. The alloy is used for jewelry.
+Conclusion: **Yes**
+
+**13**
+Triad:
+1. If a shape has three sides, it is a triangle.
+2. Shape X has three sides.
+3. Shape X has right angles.
+Question: Is Shape X a triangle?
+Answer: **Yes**
+
+Modified:
+4. No triangle has more than three sides.
+5. Shape X has four vertices.
+6. Shape X is a quadrilateral.
+Conclusion: **No**
+
+**14**
+Triad:
+1. All fruits contain seeds.
+2. Tomatoes are fruits.
+3. Tomatoes have no seeds.
+Question: Do tomatoes have seeds?
+Answer: **Inconclusive**
+
+Modified:
+4. Some cultivated tomatoes are seedless.
+5. This tomato is a cherry variety.
+6. Cherry tomatoes contain seeds.
+Conclusion: **Inconclusive**
+
+**15**
+Triad:
+1. If a person is a citizen, they can vote.
+2. Alex is a citizen.
+3. Alex is under 18.
+Question: Can Alex vote?
+Answer: **No**
+
+Modified:
+4. Voting age is 16 in some jurisdictions.
+5. Alex lives in such a jurisdiction.
+6. Alex is 17.
+Conclusion: **Yes**
+
+**16**
+Triad:
+1. No fire can exist without oxygen.
+2. The experiment used a vacuum chamber.
+3. The fire burned brightly.
+Question: Was oxygen present?
+Answer: **Yes**
+
+Modified:
+4. Some fires use chemical oxidizers.
+5. The experiment used a peroxide mixture.
+6. The chamber was sealed.
+Conclusion: **Yes**
+
+**17**
+Triad:
+1. All mammals are warm‑blooded.
+2. Whales are mammals.
+3. Whales are cold‑blooded.
+Question: Are whales warm‑blooded?
+Answer: **Yes**
+
+Modified:
+4. Some marine mammals have blubber.
+5. Whales have thick blubber.
+6. Blubber helps retain heat.
+Conclusion: **Yes**
+
+**18**
+Triad:
+1. If a number is divisible by 3, the sum of its digits is divisible by 3.
+2. 123 is divisible by 3.
+3. The digit sum of 123 is 5.
+Question: Is the digit sum of 123 divisible by 3?
+Answer: **No**
+
+Modified:
+4. 123 = 3 × 41.
+5. 41 is a prime number.
+6. The digit sum of 41 is 5.
+Conclusion: **No**
+
+**19**
+Triad:
+1. No birds have teeth.
+2. The kiwi is a bird.
+3. The kiwi has a beak.
+Question: Does the kiwi have teeth?
+Answer: **No**
+
+Modified:
+4. Some extinct birds had teeth.
+5. The moa is extinct.
+6. The moa had teeth.
+Conclusion: **No**
+
+**20**
+Triad:
+1. If a vehicle runs on diesel, it emits soot.
+2. This truck runs on diesel.
+3. The truck emits no soot.
+Question: Does the truck emit soot?
+Answer: **Inconclusive**
+
+Modified:
+4. New diesel engines have particulate filters.
+5. This truck has a filter.
+6. The filter captures soot.
+Conclusion: **No**
+
+**21**
+Triad:
+1. All squares are rectangles.
+2. Shape Y is a rectangle.
+3. Shape Y has unequal adjacent sides.
+Question: Is Shape Y a square?
+Answer: **No**
+
+Modified:
+4. All rectangles have four right angles.
+5. Shape Y has right angles.
+6. Shape Y is a parallelogram.
+Conclusion: **No**
+
+**22**
+Triad:
+1. If water freezes, temperature is ≤0 °C.
+2. The lake is frozen.
+3. The lake’s temperature is 2 °C.
+Question: Is the lake’s temperature ≤0 °C?
+Answer: **No**
+
+Modified:
+4. Saltwater freezes below 0 °C.
+5. The lake is saltwater.
+6. The lake is at –1 °C.
+Conclusion: **Yes**
+
+**23**
+Triad:
+1. No human can breathe underwater unaided.
+2. Diver A uses a snorkel.
+3. Diver A breathes underwater.
+Question: Is Diver A unaided?
+Answer: **No**
+
+Modified:
+4. Some marine mammals can hold breath for hours.
+5. Dolphin B is a marine mammal.
+6. Dolphin B breathes underwater.
+Conclusion: **Inconclusive**
+
+**24**
+Triad:
+1. All squares have area = side².
+2. Shape Z has side length 5.
+3. Shape Z’s area is 30.
+Question: Is Shape Z’s area correctly calculated?
+Answer: **No**
+
+Modified:
+4. Shape Z is a rhombus, not a square.
+5. Rhombus area = base × height.
+6. Height of Z is 6.
+Conclusion: **Inconclusive**
+
+**25**
+Triad:
+1. If a person is a teacher, they have a classroom.
+2. Maya is a teacher.
+3. Maya works from home.
+Question: Does Maya have a classroom?
+Answer: **Inconclusive**
+
+Modified:
+4. Some teachers teach online.
+5. Maya teaches online.
+6. Online teaching requires a virtual classroom.
+Conclusion: **Yes**
+
+**26**
+Triad:
+1. No metal is magnetic unless it contains iron.
+2. Aluminum is a metal.
+3. Aluminum is magnetic.
+Question: Does aluminum contain iron?
+Answer: **Inconclusive**
+
+Modified:
+4. Some alloys of aluminum are magnetic due to iron additives.
+5. The sample is an alloy.
+6. The alloy contains 5 % iron.
+Conclusion: **Yes**
+
+**27**
+Triad:
+1. All reptiles are cold‑blooded.
+2. The komodo dragon is a reptile.
+3. The komodo dragon is warm‑blooded.
+Question: Is the komodo dragon cold‑blooded?
+Answer: **Yes**
+
+Modified:
+4. Some reptiles exhibit regional endothermy.
+5. The komodo dragon can raise body temperature after a meal.
+6. This ability is temporary.
+Conclusion: **Yes**
+
+**28**
+Triad:
+1. If a car’s engine is running, the exhaust emits gases.
+2. The car’s engine is off.
+3. The exhaust is emitting gases.
+Question: Is the engine running?
+Answer: **No**
+
+Modified:
+4. Some cars have auxiliary heaters that vent exhaust.
+5. The heater is on.
+6. The heater uses engine exhaust.
+Conclusion: **No**
+
+**29**
+Triad:
+1. All humans need oxygen to survive.
+2. Patient X is on a ventilator.
+3. Patient X is breathing unaided.
+Question: Is Patient X receiving oxygen?
+Answer: **Inconclusive**
+
+Modified:
+4. The ventilator supplies pure oxygen.
+5. The ventilator is malfunctioning.
+6. Patient X is hypoxic.
+Conclusion: **Yes**
+
+**30**
+Triad:
+1. If a number is a perfect square, its root is integer.
+2. 49 is a perfect square.
+3. √49 = 6.9.
+Question: Is √49 an integer?
+Answer: **No**
+
+Modified:
+4. 49 = 7².
+5. 7 is prime.
+6. Prime numbers are integers.
+Conclusion: **Yes**
+
+**31**
+Triad:
+1. No insects have four legs.
+2. The centipede has many legs.
+3. The centipede has four legs.
+Question: Does the centipede have four legs?
+Answer: **Inconclusive**
+
+Modified:
+4. Some larvae of insects have fewer than six legs.
+5. The centipede is a larval stage.
+6. It has four legs now.
+Conclusion: **Yes**
+
+**32**
+Triad:
+1. All planets orbit a star.
+2. Pluto is a dwarf planet.
+3. Pluto does not orbit any star.
+Question: Does Pluto orbit a star?
+Answer: **Yes**
+
+Modified:
+4. Pluto orbits the Sun.
+5. The Sun is a star.
+6. Pluto’s orbit is highly elliptical.
+Conclusion: **Yes**
+
+**33**
+Triad:
+1. If a sound is louder than 120 dB, it causes pain.
+2. The jet engine produces 130 dB.
+3. Listeners report no pain.
+Question: Is the jet engine’s sound painful?
+Answer: **Yes**
+
+Modified:
+4. Ear protection reduces perceived loudness.
+5. Listeners wear helmets.
+6. Helmets attenuate 30 dB.
+Conclusion: **Inconclusive**
+
+**34**
+Triad:
+1. All squares have equal diagonals.
+2. Shape Q’s diagonals are unequal.
+3. Shape Q is a square.
+Question: Is Shape Q a square?
+Answer: **No**
+
+Modified:
+4. Some rhombuses have equal diagonals.
+5. Shape Q is a rhombus.
+6. Its diagonals differ.
+Conclusion: **No**
+
+**35**
+Triad:
+1. If a book is hardcover, it is heavier than the paperback version.
+2. Book A is hardcover.
+3. Book A weighs the same as its paperback.
+Question: Is Book A heavier?
+Answer: **Inconclusive**
+
+Modified:
+4. The paperback uses extra‑dense paper.
+5. The paperback weight = hardcover weight.
+6. Both weigh 500 g.
+Conclusion: **No**
+
+**36**
+Triad:
+1. No gas can be compressed without a container.
+2. Helium is a gas.
+3. Helium is stored in a tank.
+Question: Is the helium compressed?
+Answer: **Yes**
+
+Modified:
+4. Some gases are liquefied under pressure.
+5. Helium is liquefied in the tank.
+6. The tank is insulated.
+Conclusion: **Yes**
+
+**37**
+Triad:
+1. All squares are quadrilaterals.
+2. Shape R is a quadrilateral.
+3. Shape R has one right angle.
+Question: Is Shape R a square?
+Answer: **No**
+
+Modified:
+4. Some quadrilaterals have one right angle.
+5. Shape R is a trapezoid.
+6. Trapezoids are not squares.
+Conclusion: **No**
+
+**38**
+Triad:
+1. If a person is allergic to peanuts, they cannot eat peanut butter.
+2. Sam is allergic to peanuts.
+3. Sam eats peanut butter.
+Question: Can Sam safely eat peanut butter?
+Answer: **No**
+
+Modified:
+4. Some peanut‑free spreads mimic peanut butter.
+5. Sam eats a peanut‑free spread.
+6. The spread tastes like peanuts.
+Conclusion: **Yes**
+
+**39**
+Triad:
+1. No liquid freezes above 0 °C at standard pressure.
+2. Alcohol freezes at –114 °C.
+3. The solution is liquid at –50 °C.
+Question: Is the solution frozen?
+Answer: **No**
+
+Modified:
+4. The solution contains antifreeze.
+5. Antifreeze lowers freezing point to –80 °C.
+6. At –50 °C it is still liquid.
+Conclusion: **No**
+
+**40**
+Triad:
+1. All mammals give birth to live young.
+2. The platypus is a mammal.
+3. The platypus lays eggs.
+Question: Does the platypus give live birth?
+Answer: **Inconclusive**
+
+Modified:
+4. Monotremes are mammals that lay eggs.
+5. The platypus is a monotreme.
+6. It does not give live birth.
+Conclusion: **No**
+
+**41**
+Triad:
+1. If a road is wet, it is slippery.
+2. The road is wet.
+3. The road is not slippery.
+Question: Is the road slippery?
+Answer: **Inconclusive**
+
+Modified:
+4. The road is coated with sand.
+5. Sand increases friction.
+6. The road remains safe.
+Conclusion: **No**
+
+**42**
+Triad:
+1. All squares have four right angles.
+2. Shape S has four right angles.
+3. Shape S has unequal sides.
+Question: Is Shape S a square?
+Answer: **Inconclusive**
+
+Modified:
+4. All rectangles have four right angles.
+5. Shape S is a rectangle.
+6. Its opposite sides are equal.
+Conclusion: **No**
+
+**43**
+Triad:
+1. If a number is divisible by 5, it ends with 0 or 5.
+2. 12345 ends with 5.
+3. 12345 is not divisible by 5.
+Question: Is 12345 divisible by 5?
+Answer: **Yes**
+
+Modified:
+4. 12345 ÷ 5 = 2469.
+5. 2469 is an integer.
+6. Therefore, divisibility holds.
+Conclusion: **Yes**
+
+**44**
+Triad:
+1. No bird can fly backwards.
+2. Hummingbirds can fly backwards.
+3. Hummingbirds are birds.
+Question: Can hummingbirds fly backwards?
+Answer: **Yes**
+
+Modified:
+4. Some birds can hover.
+5. Hovering allows limited backward motion.
+6. The motion is not sustained flight.
+Conclusion: **Inconclusive**
+
+**45**
+Triad:
+1. If a chemical is acidic, it turns litmus red.
+2. Solution X turns litmus red.
+3. Solution X is basic.
+Question: Is Solution X acidic?
+Answer: **Yes**
+
+Modified:
+4. Some basic solutions contain red pigments.
+5. The pigment colors litmus.
+6. The pH of X is 9.
+Conclusion: **No**
+
+**46**
+Triad:
+1. All squares have equal diagonals.
+2. Shape T’s diagonals are equal.
+3. Shape T has four sides of different lengths.
+Question: Is Shape T a square?
+Answer: **No**
+
+Modified:
+4. Some rhombuses have equal diagonals (only if they are squares).
+5. Shape T is a rhombus.
+6. Its sides differ, so it cannot be a square.
+Conclusion: **No**
+
+**47**
+Triad:
+1. If a vehicle is electric, it emits no tailpipe CO₂.
+2. Car Y is electric.
+3. Car Y emits CO₂ from its tailpipe.
+Question: Does Car Y emit CO₂?
+Answer: **No**
+
+Modified:
+4. The car uses a gasoline generator as a range extender.
+5. The generator emits CO₂.
+6. Emissions occur only when generator runs.
+Conclusion: **Inconclusive**
+
+**48**
+Triad:
+1. All prime numbers are odd except 2.
+2. 2 is prime.
+3. 2 is even.
+Question: Is 2 odd?
+Answer: **No**
+
+Modified:
+4. 2 is the only even prime.
+5. All other primes are odd.
+6. The statement holds for all primes.
+Conclusion: **No**
+
+**49**
+Triad:
+1. No fish can survive out of water indefinitely.
+2. The lungfish can breathe air.
+3. The lungfish survived for weeks on land.
+Question: Can the lungfish survive out of water?
+Answer: **Yes**
+
+Modified:
+4. Lungfish enter a dormant state when dry.
+5. Dormancy lasts up to three months.
+6. Survival is not “indefinite.”
+Conclusion: **Inconclusive**
+
+**50**
+Triad:
+1. If a shape is regular, all its sides and angles are equal.
+2. Shape V is regular.
+3. Shape V has unequal angles.
+Question: Is Shape V regular?
+Answer: **No**
+
+Modified:
+4. Some shapes are equiangular but not equilateral.
+5. Shape V is equiangular.
+6. Its sides differ.
+Conclusion: **No**
+
+**51**
+Triad:
+1. All metals expand when heated.
+2. Iron is a metal.
+3. Iron contracts when heated.
+Question: Does iron expand when heated?
+Answer: **Yes**
+
+Modified:
+4. Thermal expansion coefficients are positive for most metals.
+5. Iron’s coefficient is +12 × 10⁻⁶ /°C.
+6. Therefore iron expands.
+Conclusion: **Yes**
+
+**52**
+Triad:
+1. No plant can survive without chlorophyll.
+2. The ghost plant lacks chlorophyll.
+3. The ghost plant lives underground.
+Question: Does the ghost plant survive?
+Answer: **Inconclusive**
+
+Modified:
+4. Some parasitic plants obtain nutrients from hosts.
+5. The ghost plant is parasitic.
+6. It attaches to roots of a host.
+Conclusion: **Yes**
+
+**53**
+Triad:
+1. If a number is a multiple of 6, it is divisible by 2 and 3.
+2. 42 is a multiple of 6.
+3. 42 is not divisible by 3.
+Question: Is 42 divisible by 3?
+Answer: **Yes**
+
+Modified:
+4. 42 ÷ 3 = 14.
+5. 14 is an integer.
+6. Hence divisibility holds.
+Conclusion: **Yes**
+
+**54**
+Triad:
+1. All circles have circumference π × diameter.
+2. Shape M is a circle.
+3. Shape M’s circumference is measured as 10 π.
+Question: Is the diameter 10?
+Answer: **Yes**
+
+Modified:
+4. Diameter = circumference ÷ π.
+5. 10 π ÷ π = 10.
+6. The computed diameter matches.
+Conclusion: **Yes**
+
+**55**
+Triad:
+1. No animal can live forever.
+2. The immortal jellyfish can revert to polyp stage.
+3. The jellyfish lives indefinitely.
+Question: Is the jellyfish immortal?
+Answer: **Inconclusive**
+
+Modified:
+4. Reversal allows indefinite cycles, not true immortality.
+5. Environmental factors can still kill it.
+6. Longevity is potentially unbounded.
+Conclusion: **Inconclusive**
+
+**56**
+Triad:
+1. If a circuit is closed, current flows.
+2. The switch is open.
+3. Current is flowing.
+Question: Is the circuit closed?
+Answer: **No**
+
+Modified:
+4. Some circuits have parallel paths.
+5. One path is closed, another open.
+6. Current flows through the closed path.
+Conclusion: **Yes**
+
+**57**
+Triad:
+1. All squares have four sides.
+2. Shape K has four sides.
+3. Shape K has one obtuse angle.
+Question: Is Shape K a square?
+Answer: **No**
+
+Modified:
+4. Squares have all right angles.
+5. Shape K’s angles are not all right.
+6. Therefore not a square.
+Conclusion: **No**
+
+**58**
+Triad:
+1. If a person is a minor, they cannot vote.
+2. Alex is 16.
+3. Alex voted in the election.
+Question: Is Alex a minor?
+Answer: **Yes**
+
+Modified:
+4. Some jurisdictions allow 16‑year‑olds to vote in local elections.
+5. Alex voted in a local election.
+6. The law permits it.
+Conclusion: **Inconclusive**
+
+**59**
+Triad:
+1. No solid can be compressed to half its volume without changing phase.
+2. Iron is solid.
+3. Iron was compressed to half volume and remained solid.
+Question: Did iron change phase?
+Answer: **No**
+
+Modified:
+4. High pressure can induce phase change in iron (to martensite).
+5. The compression reached 10 GPa.
+6. Iron transformed to a different crystal structure.
+Conclusion: **Yes**
+
+**60**
+Triad:
+1. If a language has no written form, it cannot be printed.
+2. Language Q has no written form.
+3. Language Q appears in a printed book.
+Question: Is Language Q printed?
+Answer: **Inconclusive**
+
+Modified:
+4. The book includes transliterations.
+5. Transliteration provides a written representation.
+6. Thus the language is indirectly printed.
+Conclusion: **Yes**
+
+**61**
+Triad:
+1. All squares are convex.
+2. Shape D is non‑convex.
+3. Shape D has four sides.
+Question: Is Shape D a square?
+Answer: **No**
+
+Modified:
+4. Concave quadrilaterals exist (e.g., arrowhead).
+5. Shape D is an arrowhead.
+6. It is not convex.
+Conclusion: **No**
+
+**62**
+Triad:
+1. If a person is a chef, they know how to cook.
+2. Sam is a chef.
+3. Sam cannot boil water.
+Question: Does Sam know how to cook?
+Answer: **Inconclusive**
+
+Modified:
+4. Sam specializes in molecular gastronomy.
+5. Boiling water is a basic technique he never learned.
+6. He can still prepare dishes using other methods.
+Conclusion: **Yes**
+
+**63**
+Triad:
+1. No stone can float on water.
+2. Pumice is a stone.
+3. Pumice floats on water.
+Question: Is Pumice a stone?
+Answer: **Yes**
+
+Modified:
+4. Pumice’s porosity reduces density.
+5. Its density < water density.
+6. Therefore it floats.
+Conclusion: **Yes**
+
+**64**
+Triad:
+1. If a number is odd, it is not divisible by 2.
+2. 27 is odd.
+3. 27 ÷ 2 = 13.5.
+Question: Is 27 divisible by 2?
+Answer: **No**
+
+Modified:
+4. Divisibility requires integer result.
+5. 13.5 is not integer.
+6. Hence not divisible.
+Conclusion: **No**
+
+**65**
+Triad:
+1. All squares have area = side².
+2. Shape P’s side = 3.
+3. Shape P’s area = 10.
+Question: Is Shape P’s area correct?
+Answer: **No**
+
+Modified:
+4. 3² = 9.
+5. Measured area is 10 due to measurement error.
+6. The correct area should be 9.
+Conclusion: **No**
+
+**66**
+Triad:
+1. No mammal lays eggs.
+2. The echidna is a mammal.
+3. The echidna lays eggs.
+Question: Does the echidna lay eggs?
+Answer: **Yes**
+
+Modified:
+4. Monotremes are egg‑laying mammals.
+5. Echidna belongs to monotremes.
+6. Therefore egg‑laying is consistent.
+Conclusion: **Yes**
+
+**67**
+Triad:
+1. If a star is massive, it ends as a black hole.
+2. Star X is massive.
+3. Star X became a neutron star.
+Question: Did Star X become a black hole?
+Answer: **Inconclusive**
+
+Modified:
+4. Mass threshold for black‑hole formation is ~20 M☉.
+5. Star X’s mass = 18 M☉.
+6. It collapsed into a neutron star.
+Conclusion: **No**
+
+**68**
+Triad:
+1. All squares have four right angles.
+2. Shape G has four right angles.
+3. Shape G has unequal sides.
+Question: Is Shape G a square?
+Answer: **Inconclusive**
+
+Modified:
+4. A rectangle meets those conditions.
+5. Shape G is a rectangle.
+6. Rectangles are not squares unless sides equal.
+Conclusion: **No**
+
+**69**
+Triad:
+1. If a liquid is boiled, its temperature reaches its boiling point.
+2. Water was boiled.
+3. Temperature measured was 80 °C.
+Question: Did water reach its boiling point?
+Answer: **No**
+
+Modified:
+4. At high altitude, water boils at lower temperature.
+5. Altitude = 3,000 m (boiling point ≈ 90 °C).
+6. Measured 80 °C still below boiling.
+Conclusion: **No**
+
+**70**
+Triad:
+1. No bird can swim underwater unaided.
+2. Penguins can swim underwater.
+3. Penguins are birds.
+Question: Can penguins swim underwater unaided?
+Answer: **Yes**
+
+Modified:
+4. Penguins use flippers for propulsion.
+5. Flippers are anatomical adaptations, not tools.
+6. Hence unaided.
+Conclusion: **Yes**
+
+**71**
+Triad:
+1. If a number is a perfect cube, its cube root is integer.
+2. 64 is a perfect cube.
+3. ∛64 = 5.
+Question: Is ∛64 an integer?
+Answer: **No**
+
+Modified:
+4. 4³ = 64.
+5. ∛64 = 4.
+6. 4 is integer.
+Conclusion: **Yes**
+
+**72**
+Triad:
+1. All reptiles lay eggs.
+2. The boa constrictor is a reptile.
+3. Boa constrictors give live birth.
+Question: Do boa constrictors lay eggs?
+Answer: **Inconclusive**
+
+Modified:
+4. Some snakes are ovoviviparous (eggs hatch internally).
+5. Boa constrictor is ovoviviparous.
+6. Eggs are retained until birth.
+Conclusion: **No**
+
+**73**
+Triad:
+1. No metal is transparent.
+2. Aluminum foil is transparent.
+3. Aluminum is a metal.
+Question: Is aluminum transparent?
+Answer: **No**
+
+Modified:
+4. Thin aluminum films can be semi‑transparent to certain wavelengths.
+5. The foil thickness is 10 nm.
+6. It transmits visible light partially.
+Conclusion: **Inconclusive**
+
+**74**
+Triad:
+1. If a person is a pilot, they can operate an aircraft.
+2. Maya is a pilot.
+3. Maya cannot fly a plane.
+Question: Can Maya operate an aircraft?
+Answer: **Inconclusive**
+
+Modified:
+4. Maya holds a commercial pilot license but is currently grounded due to medical reasons.
+5. She can legally operate when cleared.
+6. Currently she cannot.
+Conclusion: **No**
+
+**75**
+Triad:
+1. All squares have equal diagonals.
+2. Shape Y’s diagonals differ.
+3. Shape Y has four sides.
+Question: Is Shape Y a square?
+Answer: **No**
+
+Modified:
+4. Some kites have four sides and unequal diagonals.
+5. Shape Y is a kite.
+6. It is not a square.
+Conclusion: **No**
+
+**76**
+Triad:
+1. If a gas is ideal, PV = nRT.
+2. Gas Z follows PV = nRT.
+3. Gas Z is real.
+Question: Is Gas Z ideal?
+Answer: **Inconclusive**
+
+Modified:
+4. At high pressure, deviations occur.
+5. Gas Z is at 200 atm.
+6. Its behavior deviates from ideal.
+Conclusion: **No**
+
+**77**
+Triad:
+1. No fruit is a vegetable.
+2. Tomato is botanically a fruit.
+3. Tomato is used as a vegetable.
+Question: Is tomato a fruit?
+Answer: **Yes**
+
+Modified:
+4. Culinary classification differs from botanical.
+5. In cooking, tomato is treated as vegetable.
+6. Botanically, it remains fruit.
+Conclusion: **Yes**
+
+**78**
+Triad:
+1. If a person is left‑handed, they write with left hand.
+2. Alex is left‑handed.
+3. Alex writes with right hand.
+Question: Does Alex write with left hand?
+Answer: **No**
+
+Modified:
+4. Alex was trained to write ambidextrously.
+5. He prefers right hand for writing now.
+6. Handedness is still left‑dominant for other tasks.
+Conclusion: **Inconclusive**
+
+**79**
+Triad:
+1. All squares have area = side².
+2. Shape F’s side = 0.
+3. Shape F’s area = 0.
+Question: Is Shape F a square?
+Answer: **Inconclusive**
+
+Modified:
+4. A degenerate square collapses to a point.
+5. Such a figure is not considered a polygon in Euclidean geometry.
+6. Therefore not a proper square.
+Conclusion: **No**
+
+**80**
+Triad:
+1. No animal can survive without water.
+2. Tardigrades can survive desiccation.
+3. Tardigrades are animals.
+Question: Can tardigrades survive without water?
+Answer: **Yes**
+
+Modified:
+4. Tardigrades enter a tun state when dry.
+5. In tun state metabolism is near‑zero.
+6. They can revive when rehydrated.
+Conclusion: **Yes**
+
+**81**
+Triad:
+1. If a number is even, it ends with 0, 2, 4, 6, or 8.
+2. 142 ends with 2.
+3. 142 is odd.
+Question: Is 142 even?
+Answer: **Yes**
+
+Modified:
+4. 142 ÷ 2 = 71.
+5. 71 is integer.
+6. Hence even.
+Conclusion: **Yes**
+
+**82**
+Triad:
+1. All squares are rectangles.
+2. Shape R is a rectangle.
+3. Shape R has unequal adjacent sides.
+Question: Is Shape R a square?
+Answer: **No**
+
+Modified:
+4. Squares are a subset of rectangles.
+5. Shape R lacks equal sides.
+6. Therefore not a square.
+Conclusion: **No**
+
+**83**
+Triad:
+1. If a device has a battery, it can operate unplugged.
+2. Lamp L has a battery.
+3. Lamp L is always plugged in.
+Question: Can Lamp L operate unplugged?
+Answer: **Inconclusive**
+
+Modified:
+4. The battery is depleted.
+5. The lamp cannot run on battery power.
+6. It requires mains electricity.
+Conclusion: **No**
+
+**84**
+Triad:
+1. No stone can be cut by a knife.
+2. Marble is a stone.
+3. Marble was cut with a diamond blade.
+Question: Was marble cut by a knife?
+Answer: **No**
+
+Modified:
+4. Diamond blades are technically knives with abrasive edges.
+5. The blade sliced the marble.
+6. The tool qualifies as a knife.
+Conclusion: **Inconclusive**
+
+**85**
+Triad:
+1. If a person is a mathematician, they understand proofs.
+2. Dr. Q is a mathematician.
+3. Dr. Q cannot follow this proof.
+Question: Does Dr. Q understand proofs?
+Answer: **Inconclusive**
+
+Modified:
+4. Dr. Q specializes in applied math, not formal logic.
+5. The proof uses advanced set theory.
+6. Dr. Q lacks that background.
+Conclusion: **No**
+
+**86**
+Triad:
+1. All squares have four equal sides.
+2. Shape H has four equal sides.
+3. Shape H has one angle of 120°.
+Question: Is Shape H a square?
+Answer: **No**
+
+Modified:
+4. A rhombus can have equal sides and an obtuse angle.
+5. Shape H is a rhombus.
+6. It is not a square.
+Conclusion: **No**
+
+**87**
+Triad:
+1. No plant can move voluntarily.
+2. Venus flytrap closes its leaves when triggered.
+3. The closure is a movement.
+Question: Does the Venus flytrap move voluntarily?
+Answer: **No**
+
+Modified:
+4. The movement is a rapid plant response (tropism).
+5. It is triggered by mechanical stimulus.
+6. Not a conscious voluntary action.
+Conclusion: **No**
+
+**88**
+Triad:
+1. If a number is divisible by 9, sum of its digits is divisible by 9.
+2. 729 is divisible by 9.
+3. Digit sum of 729 is 8.
+Question: Is the digit sum divisible by 9?
+Answer: **No**
+
+Modified:
+4. 7+2+9 = 18.
+5. 18 ÷ 9 = 2.
+6. Therefore divisible.
+Conclusion: **Yes**
+
+**89**
+Triad:
+1. No metal rusts without oxygen.
+2. Iron rusts in water.
+3. Water contains dissolved oxygen.
+Question: Does iron rust because of oxygen?
+Answer: **Yes**
+
+Modified:
+4. Iron also rusts in presence of electrolytes.
+5. The water is saline.
+6. Both oxygen and electrolytes accelerate corrosion.
+Conclusion: **Yes**
+
+**90**
+Triad:
+1. All squares are convex.
+2. Shape X is concave.
+3. Shape X has four sides.
+Question: Is Shape X a square?
+Answer: **No**
+
+Modified:
+4. Concave quadrilaterals exist (e.g., dart).
+5. Shape X is a dart.
+6. Not convex, thus not a square.
+Conclusion: **No**
+
+**91**
+Triad:
+1. If a gas is ideal, its internal energy depends only on temperature.
+2. Gas Y’s internal energy changes with volume at constant temperature.
+3. Gas Y is ideal.
+Question: Does internal energy of Gas Y depend on volume?
+Answer: **No**
+
+Modified:
+4. Real gases show volume dependence.
+5. Gas Y is at high pressure, deviating from ideal.
+6. Internal energy varies with volume.
+Conclusion: **Yes**
+
+**92**
+Triad:
+1. No bird can survive in Antarctica without insulation.
+2. Emperor penguins live in Antarctica.
+3. Emperor penguins have no feathers.
+Question: Do emperor penguins have feathers?
+Answer: **No**
+
+Modified:
+4. Penguins are feathered, but feathers are dense and oily.
+5. Emperor penguins possess a thick feather coat.
+6. Their feathers provide insulation.
+Conclusion: **Yes**
+
+**93**
+Triad:
+1. If a number is prime, it has exactly two distinct divisors.
+2. 2 is prime.
+3. 2 has only one divisor.
+Question: Does 2 have exactly two divisors?
+Answer: **Yes**
+
+Modified:
+4. Divisors of 2 are 1 and 2.
+5. Count = 2.
+6. Condition satisfied.
+Conclusion: **Yes**
+
+**94**
+Triad:
+1. All squares have opposite sides parallel.
+2. Shape Q has opposite sides parallel.
+3. Shape Q has one side longer than the opposite.
+Question: Is Shape Q a square?
+Answer: **No**
+
+Modified:
+4. A rectangle meets those conditions.
+5. Shape Q is a rectangle.
+6. Not a square because sides differ.
+Conclusion: **No**
+
+**95**
+Triad:
+1. No fish can breathe air.
+2. The lungfish can breathe air.
+3. Lungfish are fish.
+Question: Can lungfish breathe air?
+Answer: **Yes**
+
+Modified:
+4. Lungfish possess a specialized respiratory organ.
+5. It allows atmospheric respiration.
+6. Therefore air breathing is factual.
+Conclusion: **Yes**
+
+**96**
+Triad:
+1. If a material is superconducting, it has zero electrical resistance.
+2. Material X is superconducting at 4 K.
+3. At 4 K, its resistance is measurable.
+Question: Does Material X have zero resistance at 4 K?
+Answer: **No**
+
+Modified:
+4. The measurement device has its own resistance.
+5. The observed resistance is from instrumentation.
+6. Material X itself remains zero‑resistance.
+Conclusion: **Yes**
+
+**97**
+Triad:
+1. All squares have four equal angles.
+2. Shape M has four equal angles.
+3. Shape M has unequal sides.
+Question: Is Shape M a square?
+Answer: **Inconclusive**
+
+Modified:
+4. A rhombus can have equal angles only if it is a square.
+5. Shape M’s angles are 90°.
+6. Therefore sides must be equal; they are not, so contradiction.
+Conclusion: **No**
+
+**98**
+Triad:
+1. No metal is magnetic unless it contains iron, nickel, or cobalt.
+2. Aluminum is magnetic.
+3. Aluminum contains no iron, nickel, or cobalt.
+Question: Is aluminum magnetic?
+Answer: **No**
+
+Modified:
+4. Aluminum can become magnetic when alloyed with ferromagnetic elements.
+5. The sample is an Al‑Fe alloy.
+6. Magnetism arises from iron content.
+Conclusion: **Yes**
+
+**99**
+Triad:
+1. If a person is a botanist, they study plants.
+2. Dr. R is a botanist.
+3. Dr. R studies rocks.
+Question: Does Dr. R study plants?
+Answer: **Inconclusive**
+
+Modified:
+4. Dr. R’s primary research is paleobotany (fossil plants).
+5. Fossil plants are studied via rock samples.
+6. Thus studying rocks is part of plant study.
+Conclusion: **Yes**
+
+**100**
+Triad:
+1. All squares have a perimeter equal to four times the side length.
+2. Shape Z’s side length is 5.
+3. Shape Z’s perimeter is 30.
+Question: Is Shape Z’s perimeter correct?
+Answer: **No**
+
+Modified:
+4. Perimeter = 4 × 5 = 20.
+5. Measured 30 due to an extra segment.
+6. The shape is not a simple square.
+Conclusion: **No**
