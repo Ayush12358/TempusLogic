@@ -281,7 +281,7 @@ class Parser:
             
         elif token.type == 'ID':
             self.eat('ID')
-            return Variable(token.value) # BUGFIX: Was token.name
+            return Variable(token.value)
             
         elif token.type == 'TRUTH':
             self.eat('TRUTH')
@@ -402,53 +402,26 @@ class Interpreter:
         raise RuntimeError("Interpreter error: Program finished without a 'return' statement.")
 
 
-# --- 5. EXAMPLE USAGE ---
+# --- 5. HELPER FUNCTION ---
 
-if __name__ == "__main__":
-    # Import the generator from your other file
-    # We assume 'obfuscated_smol_generator.py' is in the same directory
+def get_ground_truth(code_string: str) -> str:
+    """
+    Interprets a smol code string and returns the ground truth output.
+    Returns the output as a string ('truth', 'false', or a number str).
+    Returns 'INTERPRETER_ERROR: ...' on failure.
+    """
     try:
-        from obfuscated_smol_generator import ObfuscatedSmolGenerator
-    except ImportError:
-        print("Could not import ObfuscatedSmolGenerator.")
-        print("Please ensure 'obfuscated_smol_generator.py' is in the same directory.")
-        exit(1)
-
-    print("--- Smol Language Test Pipeline ---")
-    
-    # 1. Generate a random, unambiguous smol program
-    print("Generating smol program...")
-    generator = ObfuscatedSmolGenerator(max_depth=3, max_statements_per_block=3)
-    smol_code = generator.generate_program()
-    
-    print("\n--- Generated Code ---")
-    print(smol_code)
-    print("------------------------")
-
-    # 2. Run the Interpreter to get the ground truth
-    print("Interpreting code to get ground truth...")
-    
-    try:
-        lexer = Lexer(smol_code)
+        lexer = Lexer(code_string)
         parser = Parser(lexer)
         interpreter = Interpreter(parser)
         
-        ground_truth_output = interpreter.interpret()
+        output = interpreter.interpret()
         
-        # Convert Python True/False to 'truth'/'false'
-        if isinstance(ground_truth_output, bool):
-            truth_string = "truth" if ground_truth_output else "false"
+        # Convert Python bool to 'truth'/'false'
+        if isinstance(output, bool):
+            return "truth" if output else "false"
         else:
-            truth_string = str(ground_truth_output)
-
-        print(f"\n--- Ground Truth Output ---")
-        print(truth_string)
-        print("---------------------------")
-        
-        print("\nPipeline success. You can now use 'smol_code' and 'truth_string' to test an LLM.")
-
+            return str(output)
+            
     except Exception as e:
-        print(f"\n--- INTERPRETER FAILED ---")
-        print("The generated code caused an error. This is a bug in the generator or interpreter.")
-        print(f"Error: {e}")
-        print("--------------------------")
+        return f"INTERPRETER_ERROR: {e}"
