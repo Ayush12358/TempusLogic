@@ -1,1 +1,0 @@
-Determine whether a given integer number is prime.

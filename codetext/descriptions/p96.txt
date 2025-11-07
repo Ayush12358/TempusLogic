@@ -1,1 +1,0 @@
-Syntax checker (alternative solution with difference lists)

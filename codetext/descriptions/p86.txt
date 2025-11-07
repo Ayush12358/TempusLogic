@@ -1,1 +1,0 @@
-Node degree and graph coloration

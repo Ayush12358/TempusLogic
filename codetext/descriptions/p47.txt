@@ -1,1 +1,0 @@
-Truth tables for logical expressions (2).

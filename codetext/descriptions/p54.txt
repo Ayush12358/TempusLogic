@@ -1,1 +1,0 @@
-Check whether a given expression represents a binary tree

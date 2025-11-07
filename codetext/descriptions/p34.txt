@@ -1,1 +1,0 @@
-Calculate Euler's totient function phi(m).

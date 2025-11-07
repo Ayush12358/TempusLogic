@@ -1,1 +1,0 @@
-Drop every N'th element from a list.
