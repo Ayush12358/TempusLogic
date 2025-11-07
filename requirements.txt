@@ -1,4 +1,6 @@
 pandas
+matplotlib
 ollama
 huggingface_hub
 google-genai
+openAI
